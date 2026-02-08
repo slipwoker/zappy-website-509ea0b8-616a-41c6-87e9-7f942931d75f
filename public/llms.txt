@@ -1,0 +1,53 @@
+# שגיא — Generative Engine Optimization Map
+
+> A התחדשות עירונית business.
+
+---
+
+## Pages
+
+### Home
+https://-509ea0b8.zappy5.app
+
+### Process
+https://-509ea0b8.zappy5.app/process
+
+### Documents
+https://-509ea0b8.zappy5.app/documents
+
+### Contact
+https://-509ea0b8.zappy5.app/contact
+
+## Legal & Policy
+
+### Privacy Policy
+https://-509ea0b8.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-509ea0b8.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-509ea0b8.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About שגיא
+שגיא is a business in the התחדשות עירונית industry.
+
+## Target Audience
+דיירים בפרויקטי התחדשות עירונית
+
+## Industry
+התחדשות עירונית
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-509ea0b8.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-509ea0b8.zappy5.app/robots.txt
