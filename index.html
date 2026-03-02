@@ -1,12 +1,224 @@
-<!DOCTYPE html><html lang="he" dir="rtl"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>שגיא התחדשות עירונית | שגיא התחדשות עירונית</title>
-  <meta name="description" content="Home - שגיא התחדשות עירונית provides professional התחדשות עירונית services. Specializing in שגיא התחדשות עירונית.">
-  <meta name="keywords" content="שגיא התחדשות עירונית, ליווי דיירים בפרויקט תמא 38, ארגון דיירים להתחדשות עירונית, ייצוג דיירים מול יזמים בפינוי בינוי">
-  <meta name="robots" content="index, follow">
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Generated Website</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
   
-  <meta property="og:title" content="שגיא התחדשות עירונית | שגיא התחדשות עירונית">
+  // Configuration
+  var config = {
+    websiteId: '509ea0b8-616a-41c6-87e9-7f942931d75f',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <meta property="og:title" content="שגיא התחדשות עירונית | שגיא התחדשות עירונית">
   <meta property="og:description" content="Home - שגיא התחדשות עירונית provides professional התחדשות עירונית services. Specializing in שגיא התחדשות עירונית.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
@@ -14,7 +226,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="שגיא התחדשות עירונית | שגיא התחדשות עירונית">
   <meta name="twitter:description" content="Home - שגיא התחדשות עירונית provides professional התחדשות עירונית services. Specializing in שגיא התחדשות עירונית.">
-  <link rel="stylesheet" href="/styles.css">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Favicons -->
@@ -4464,208 +4676,7 @@
   }
 }
 </style>
-<!-- Zappy Analytics -->
-<script>
-(function() {
-  'use strict';
-  
-  // Configuration
-  var config = {
-    websiteId: '509ea0b8-616a-41c6-87e9-7f942931d75f',
-    apiUrl: 'https://api.zappy5.com/api/analytics/track',
-    sessionDuration: 30 * 60 * 1000, // 30 minutes
-    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
-    trackPageViews: true,
-    trackClicks: true,
-    trackFormSubmissions: true
-  };
-  
-  // Generate or retrieve persistent visitor ID (30 days)
-  function getVisitorId() {
-    var visitorKey = 'zappy_visitor_' + config.websiteId;
-    var visitor = null;
-    
-    try {
-      visitor = localStorage.getItem(visitorKey);
-      if (visitor) {
-        var visitorData = JSON.parse(visitor);
-        var now = Date.now();
-        
-        // Check if visitor ID is still valid (30 days)
-        if (now - visitorData.created < config.visitorDuration) {
-          // Update last seen timestamp
-          visitorData.lastSeen = now;
-          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
-          return visitorData.id;
-        }
-      }
-    } catch (e) {
-      console.warn('Zappy Analytics: LocalStorage not available');
-    }
-    
-    // Generate new visitor ID
-    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    
-    try {
-      localStorage.setItem(visitorKey, JSON.stringify({
-        id: newVisitorId,
-        created: Date.now(),
-        lastSeen: Date.now()
-      }));
-    } catch (e) {
-      // Continue without local storage
-    }
-    
-    return newVisitorId;
-  }
-  
-  // Generate or retrieve session ID (30 minutes)
-  function getSessionId() {
-    var sessionKey = 'zappy_session_' + config.websiteId;
-    var session = null;
-    
-    try {
-      session = sessionStorage.getItem(sessionKey);
-      if (session) {
-        var sessionData = JSON.parse(session);
-        var now = Date.now();
-        
-        // Check if session is still valid
-        if (now - sessionData.timestamp < config.sessionDuration) {
-          // Update timestamp
-          sessionData.timestamp = now;
-          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
-          return sessionData.id;
-        }
-      }
-    } catch (e) {
-      console.warn('Zappy Analytics: SessionStorage not available');
-    }
-    
-    // Generate new session ID
-    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    
-    try {
-      sessionStorage.setItem(sessionKey, JSON.stringify({
-        id: newSessionId,
-        timestamp: Date.now()
-      }));
-    } catch (e) {
-      // Continue without session storage
-    }
-    
-    return newSessionId;
-  }
-  
-  var visitorId = getVisitorId();
-  var sessionId = getSessionId();
-  
-  // Track an event
-  function trackEvent(eventType, data) {
-    data = data || {};
-    
-    var eventData = {
-      website_id: config.websiteId,
-      event_type: eventType,
-      page_path: window.location.pathname,
-      referrer: document.referrer || 'direct',
-      visitor_id: visitorId,
-      session_id: sessionId,
-      metadata: data
-    };
-    
-    // Use sendBeacon if available (better for page unload events)
-    if (navigator.sendBeacon) {
-      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
-      navigator.sendBeacon(config.apiUrl, blob);
-    } else {
-      // Fallback to fetch
-      fetch(config.apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(eventData),
-        keepalive: true
-      }).catch(function(error) {
-        console.warn('Zappy Analytics: Failed to track event', error);
-      });
-    }
-  }
-  
-  // Track page view
-  if (config.trackPageViews) {
-    trackEvent('pageview', {
-      title: document.title,
-      url: window.location.href
-    });
-  }
-  
-  // Track clicks on important elements
-  if (config.trackClicks) {
-    document.addEventListener('click', function(e) {
-      var target = e.target;
-      
-      // Track button clicks (counted as actions)
-      if (target.tagName === 'BUTTON' || target.closest('button')) {
-        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
-        trackEvent('click', {
-          element: 'button',
-          text: button.textContent.trim().substring(0, 100),
-          id: button.id || null,
-          class: button.className || null
-        });
-      }
-      
-      // Track link clicks (navigation - not counted as actions)
-      else if (target.tagName === 'A' || target.closest('a')) {
-        var link = target.tagName === 'A' ? target : target.closest('a');
-        trackEvent('navigation', {
-          element: 'link',
-          text: link.textContent.trim().substring(0, 100),
-          href: link.href,
-          external: link.hostname !== window.location.hostname
-        });
-      }
-    }, true);
-  }
-  
-  // Track form submissions
-  if (config.trackFormSubmissions) {
-    document.addEventListener('submit', function(e) {
-      var form = e.target;
-      
-      trackEvent('form_submit', {
-        form_id: form.id || null,
-        form_name: form.name || null,
-        form_action: form.action || null,
-        form_method: form.method || 'GET'
-      });
-    }, true);
-  }
-  
-  // Track time on page (send on page unload)
-  var pageLoadTime = Date.now();
-  
-  window.addEventListener('beforeunload', function() {
-    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
-    
-    trackEvent('page_unload', {
-      time_on_page: timeOnPage,
-      page_path: window.location.pathname
-    });
-  });
-  
-  // Expose tracking function globally for custom events
-  window.zappyAnalytics = {
-    track: trackEvent,
-    getVisitorId: function() { return visitorId; },
-    getSessionId: function() { return sessionId; }
-  };
-  
-})();
-</script>
-<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="/styles.css">
 
     <style id="mobile-lang-menu-deployed-css">
     @media (max-width: 768px) {
@@ -4691,8 +4702,18 @@
       .mobile-lang-menu { display: none !important; }
     }
     </style>
+
+    <style id="zappy-widget-visibility">
+      #mic-access-tool-general-button, .mic-access-tool-general-button,
+      #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+      ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+      #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+        display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+      }
+    </style>
 </head>
 <body>
+
 
 <!-- Zappy Attribution Header -->
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
@@ -4700,17 +4721,17 @@
 </div>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" data-element-type="button" data-element-id="btn-1770675141032-770rl3uxj" data-native-element="true">
-    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="width: 24px !important; height: 24px !important; display: block !important;">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="width: 24px !important; height: 24px !important; display: block !important;">
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
-    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none !important; width: 24px !important; height: 24px !important;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none !important; width: 24px !important; height: 24px !important;">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
   
   <button class="phone-header-btn" aria-label="Call" data-element-type="button" data-element-id="btn-1770675141032-nsqga51oh" data-native-element="true">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    <svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
   
@@ -4724,7 +4745,7 @@
     
     
     <div class="nav-cta-container">
-      <a href="/contact" class="nav-cta-btn" data-element-type="button" data-element-id="btn-1770675141032-oaw2w96gz" data-native-element="true" data-text-color="light" style="border-color: transparent !important; color: var(--light-text, #ffffff) !important; background-color: transparent !important; background-image: none !important;">צור קשר</a>
+      <a href="/contact" class="nav-cta-btn" data-element-type="button" data-element-id="btn-1770675141032-oaw2w96gz" data-native-element="true" data-text-color="light" style="border-color: transparent !important; color: rgb(251, 250, 250) !important; background-color: transparent !important; background-image: none !important;">צור קשר</a>
     </div>
   </div>
 </nav>
@@ -5146,9 +5167,9 @@
       <div class="home-timeline-step" data-step="1">
         <div class="home-timeline-node">
           <div class="home-timeline-node-inner">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <span class="home-timeline-number">01</span>
           </div>
@@ -5162,11 +5183,11 @@
       <div class="home-timeline-step" data-step="2">
         <div class="home-timeline-node">
           <div class="home-timeline-node-inner">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <span class="home-timeline-number">02</span>
           </div>
@@ -5180,12 +5201,12 @@
       <div class="home-timeline-step" data-step="3">
         <div class="home-timeline-node">
           <div class="home-timeline-node-inner">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <span class="home-timeline-number">03</span>
           </div>
@@ -5199,11 +5220,11 @@
       <div class="home-timeline-step" data-step="4">
         <div class="home-timeline-node">
           <div class="home-timeline-node-inner">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9 15H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M12 12V18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M9 15H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 12V18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <span class="home-timeline-number">04</span>
           </div>
@@ -5217,9 +5238,9 @@
       <div class="home-timeline-step" data-step="5">
         <div class="home-timeline-node">
           <div class="home-timeline-node-inner">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <span class="home-timeline-number">05</span>
           </div>
@@ -5233,11 +5254,11 @@
       <div class="home-timeline-step" data-step="6">
         <div class="home-timeline-node">
           <div class="home-timeline-node-inner">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 10H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 6H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 14H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 18H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 10H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M21 6H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M21 14H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M21 18H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <span class="home-timeline-number">06</span>
           </div>
@@ -5251,15 +5272,15 @@
   </div>
 
   <div class="home-timeline-divider-wrapper">
-    <svg aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg aria-hidden="true" viewbox="0 0 1200 80" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="divider-gradient-timeline" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:var(--bg-light);stop-opacity:1"/>
-          <stop offset="50%" style="stop-color:#D7DDEA;stop-opacity:1"/>
-          <stop offset="100%" style="stop-color:var(--bg-light);stop-opacity:1"/>
+          <stop offset="0%" style="stop-color:var(--bg-light);stop-opacity:1"></stop>
+          <stop offset="50%" style="stop-color:#D7DDEA;stop-opacity:1"></stop>
+          <stop offset="100%" style="stop-color:var(--bg-light);stop-opacity:1"></stop>
         </linearGradient>
       </defs>
-      <path d="M0,80 L0,40 L200,35 L400,42 L600,38 L800,40 L1000,36 L1200,40 L1200,80 Z" fill="url(#divider-gradient-timeline)"/>
+      <path d="M0,80 L0,40 L200,35 L400,42 L600,38 L800,40 L1000,36 L1200,40 L1200,80 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
@@ -5268,9 +5289,9 @@
 
 <section class="home-success-stories-section" data-layout-spec="Home-success-stories" data-zappy-section="true">
   <div class="home-success-stories-divider-wrapper">
-    <svg aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,25 Q150,20 300,28 T600,22 Q750,28 900,20 T1200,25 L1200,60 Z" fill="var(--bg-light)"/>
-      <path d="M0,26 Q150,21 300,29 T600,23 Q750,29 900,21 T1200,26" stroke="var(--accent)" stroke-width="1" fill="none" opacity="0.4"/>
+    <svg aria-hidden="true" viewbox="0 0 1200 60" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 L0,25 Q150,20 300,28 T600,22 Q750,28 900,20 T1200,25 L1200,60 Z" fill="var(--bg-light)"></path>
+      <path d="M0,26 Q150,21 300,29 T600,23 Q750,29 900,21 T1200,26" stroke="var(--accent)" stroke-width="1" fill="var(--bg-light)" opacity="0.4"></path>
     </svg>
   </div>
   
@@ -5285,8 +5306,8 @@
           <img alt="פרויקט התחדשות עירונית - בניין מגורים בלילה" src="/assets/site-home-success-stories-image-1.webp" data-placeholder="home-success-stories-image-1" data-context="Cinematic night architecture photo of a modern residential building under urban renewal in Israel, with controlled warm lighting from windows creating a calm atmosphere, shot from street level showing the building facade with dramatic shadows and highlights, professional architectural photography with shallow depth of field" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; position: relative;" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1770554462074-rk9p9qsoc" class="zappy-editable-image" data-original-position="static">
         </div>
         <div class="home-success-stories-content">
-          <h3 class style>מתחם התפוז כפר סבא | נציגות</h3>
-          <p class>האתגר: הנגשת מידע משפטי ויצירת עבודה - משותפת בין מארגני הדיירים לערוכי הדין. חששות הדיירים מול יזם גדול. התוצאה: הסכם מאוזן, התחחייבויות משפטיות, עבודה משותפת והשגת תקציב יזמי.&nbsp;</p>
+          <h3 class="" style="">מתחם התפוז כפר סבא | נציגות</h3>
+          <p class="">האתגר: הנגשת מידע משפטי ויצירת עבודה - משותפת בין מארגני הדיירים לערוכי הדין. חששות הדיירים מול יזם גדול. התוצאה: הסכם מאוזן, התחחייבויות משפטיות, עבודה משותפת והשגת תקציב יזמי.&nbsp;</p>
           <div class="home-success-stories-case-note">
             <span class="home-success-stories-case-label">פרטי מקרה:</span>
             <span class="home-success-stories-case-data">שטח: 4,200-4,800 מ"ר | 3 בניינים | שלב: הסכם חתום | יזם: אקרו נדל״ן</span>
@@ -5297,8 +5318,8 @@
           <div data-zappy-zoom-wrapper="true" data-element-id="img-1770554462074-m8vdi5vn0" data-element-type="image" data-zappy-zoom-wrapper-width="358px" data-zappy-zoom-wrapper-height="267px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: visible !important; width: 100% !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: auto !important; display: block !important; min-height: 150px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" class="zappy-resizable-hover"><img alt="פרויקט תמא 38 - בניין חדש בלילה" src="/assets/site-home-success-stories-image-3.webp" data-placeholder="home-success-stories-image-3" data-context="Cinematic night architecture photo of a newly constructed residential building in Israel under urban renewal project, modern design with clean lines and warm interior lighting visible through large windows, shot from an angle showing depth and architectural details, professional real estate photography with controlled highlights and shadows" style="width: 100% !important; height: auto !important; object-fit: cover !important; object-position: 50% 50%; position: relative !important; margin: 0px !important; max-width: 100% !important; max-height: 300px !important; display: block !important;" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1770554462074-m8vdi5vn0" class="zappy-editable-image" data-original-position="static" data-zappy-zoom="1.05"></div>
         </div>
         <div class="home-success-stories-content">
-          <h3 class>ז׳בוטינסקי תל אביב | ארגון</h3>
-          <p class>האתגר: החלפת יזם שלא עמד בהתחיוביותיו. שבירת אמון הדיירים בהליך ההתחדשות. התוצאה: מציאת יזם מתאים ובניית אמון מחודשת לדיירים, קבלת התמורות הרצויות, החלפה חלקה בליווי משפטי מתואם.</p>
+          <h3 class="">ז׳בוטינסקי תל אביב | ארגון</h3>
+          <p class="">האתגר: החלפת יזם שלא עמד בהתחיוביותיו. שבירת אמון הדיירים בהליך ההתחדשות. התוצאה: מציאת יזם מתאים ובניית אמון מחודשת לדיירים, קבלת התמורות הרצויות, החלפה חלקה בליווי משפטי מתואם.</p>
           <div class="home-success-stories-case-note">
             <span class="home-success-stories-case-label">פרטי מקרה:</span>
             <span class="home-success-stories-case-data">שטח: 5,200-5,800 מ"ר | 4 בניינים | שלב: תכנון מפורט | יזם חדש: נוף הנדסה</span>
@@ -5309,8 +5330,8 @@
           <img alt="פרויקט פינוי בינוי - בניין ישן בלילה" src="/assets/site-home-success-stories-image-2.webp" data-placeholder="home-success-stories-image-2" data-context="Cinematic night urban architecture photo of an older residential building in Israel being prepared for urban renewal, exterior shot with dramatic lighting highlighting the building structure, controlled highlights from interior windows, professional photography with moody atmosphere and sharp details" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; position: relative;" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1770554462074-mk4w0llmo" class="zappy-editable-image" data-original-position="static">
         </div>
         <div class="home-success-stories-content">
-          <h3 class style>כצנלסון גבעתיים | נציגות</h3>
-          <p class>האתגר: התתחלת פרוייקט חדש, התאגדות, בחירת מודל תכנון יזמי ויציאה תחת תב״עת המטרו. התוצאה: מיפוי אלטרנטיבות, משא ומתן, ופתרון מתועד שהגן על אינטרסים של הדיירים.</p>
+          <h3 class="" style="">כצנלסון גבעתיים | נציגות</h3>
+          <p class="">האתגר: התתחלת פרוייקט חדש, התאגדות, בחירת מודל תכנון יזמי ויציאה תחת תב״עת המטרו. התוצאה: מיפוי אלטרנטיבות, משא ומתן, ופתרון מתועד שהגן על אינטרסים של הדיירים.</p>
           <div class="home-success-stories-case-note">
             <span class="home-success-stories-case-label">פרטי מקרה:</span>
             <span class="home-success-stories-case-data">שטח: 3,500-4,000 מ"ר | 5 בניינים | שלב: תכנון ובחירת שותפים | משרד עו״ד מלווה: נשיץ ברנדס</span>
@@ -5365,15 +5386,15 @@
             <a href="tel:058-4811342">058-4811342</a>
           </li>
           <li><a href="/"><i class="fas fa-map-marker-alt"></i>
-            <span>האילנות 35, ישראל</span></a></li>
+            <span>האילנות 35, הרצליה, ישראל</span></a></li>
         </ul>
       </div>
       
       <div class="footer-column footer-social">
         <h3 class="footer-title">עקבו אחרינו</h3>
         <div class="social-links">
-          <a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-          <a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"></a>
+          
+          
           <a href="https://wa.me/972584811342" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
@@ -5398,10 +5419,7 @@
     <i class="fab fa-whatsapp"></i>
   </a>
   
-  <script src="/script.js"></script>
-
-
-<!-- Zappy Attribution Header Script -->
+  <!-- Zappy Attribution Header Script -->
 <script>
 (function() {
   var websiteId = '509ea0b8-616a-41c6-87e9-7f942931d75f';
@@ -5460,6 +5478,8 @@
 })();
 </script>
     <div data-integration="accessibility:toolbar"></div>
+
+    <script src="/script.js"></script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {
@@ -5581,4 +5601,33 @@
       window.addEventListener('resize', function() { clearTimeout(window._mlrt); window._mlrt = setTimeout(initMobileLangMenu, 250); });
     })();
     </script>
-</body></html>
+
+    <script>
+    (function(){
+      if(window.innerWidth>768)return;
+      function fixZW(){
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          var cw=w.style.getPropertyValue('width');
+          if(!cw||cw==='100%')return;
+          w.style.setProperty('width','100%','important');
+          w.style.setProperty('max-width','100%','important');
+          w.style.setProperty('height','auto','important');
+          var img=w.querySelector('img');
+          if(img){
+            img.style.setProperty('position','relative','important');
+            img.style.setProperty('width','100%','important');
+            img.style.setProperty('height','auto','important');
+            img.style.setProperty('max-width','100%','important');
+            img.style.setProperty('max-height','400px','important');
+            img.style.setProperty('object-fit','cover','important');
+            img.style.setProperty('left','0','important');
+            img.style.setProperty('top','0','important');
+          }
+        });
+      }
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fixZW);
+      else setTimeout(fixZW,50);
+    })();
+    </script>
+</body>
+</html>
