@@ -722,222 +722,7 @@
 }
 </style>
 
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: #070A0E;
-  color: var(--text-light);
-  overflow: hidden;
-}
 
-.home-Hero-section__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-.home-Hero-section__background::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%);
-  z-index: 1;
-}
-
-.home-Hero-section__grid-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,194,211,0.03) 39px, rgba(0,194,211,0.03) 40px),
-    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,194,211,0.03) 39px, rgba(0,194,211,0.03) 40px);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.home-Hero-section__container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  z-index: 10;
-}
-
-.home-Hero-section__content {
-  max-width: 580px;
-  margin-inline-start: 0;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0 0 20px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__subtitle {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0 0 24px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.78);
-  margin: 0 0 32px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.home-Hero-section__btn {
-  display: inline-block;
-  text-decoration: none;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  padding: 12px 18px;
-  border-radius: 6px;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  cursor: pointer;
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18);
-}
-
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.25);
-}
-
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  transform: translateY(-3px);
-  background: rgba(0,194,211,0.08);
-  border-color: rgba(0,194,211,0.35);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.50), 0 0 28px rgba(0,194,211,0.30);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  opacity: 0.4;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    padding-top: 100px;
-  }
-
-  .home-Hero-section__container {
-    padding: 0 16px;
-  }
-
-  .home-Hero-section__content {
-    max-width: 100%;
-  }
-
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-
-  .home-Hero-section__subtitle {
-    font-size: 18px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-  }
-
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.65;
-    margin-bottom: 24px;
-  }
-
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
-  .home-Hero-section__btn {
-    width: 100%;
-    text-align: center;
-    padding: 14px 20px;
-  }
-
-  .home-Hero-section__status-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 11px;
-  }
-
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-}
-</style>
 
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
@@ -1145,224 +930,7 @@
 
 </style>
 
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-  background: #070A0E;
-  color: var(--text-light);
-}
 
-.home-Hero-section__bg-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.home-Hero-section__bg-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%);
-  z-index: 1;
-}
-
-.home-Hero-section__grid-texture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(234,242,255,0.02) 39px, rgba(234,242,255,0.02) 40px),
-    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(234,242,255,0.02) 39px, rgba(234,242,255,0.02) 40px);
-  opacity: 0.4;
-}
-
-.home-Hero-section__container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 32px 80px 32px;
-}
-
-.home-Hero-section__content {
-  max-width: 580px;
-  margin-inline-start: 0;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0 0 24px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: rgba(234,242,255,0.72);
-  margin: 0 0 20px 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.75;
-  color: rgba(234,242,255,0.72);
-  margin: 0 0 32px 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.home-Hero-section__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 6px;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  text-decoration: none;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.home-Hero-section__btn:hover {
-  transform: translateY(-3px);
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18);
-}
-
-.home-Hero-section__btn--primary:hover {
-  box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.25);
-}
-
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  border-color: rgba(234,242,255,0.35);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.50), 0 0 28px rgba(0,194,211,0.30);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  color: rgba(234,242,255,0.35);
-  font-weight: 400;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-  }
-  
-  .home-Hero-section__container {
-    padding: 100px 16px 60px 16px;
-  }
-  
-  .home-Hero-section__content {
-    max-width: 100%;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-  
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  
-  .home-Hero-section__btn {
-    width: 100%;
-    padding: 14px 20px;
-  }
-  
-  .home-Hero-section__status-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 11px;
-  }
-  
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-}
-</style>
 
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
@@ -1620,934 +1188,19 @@
 }
 </style>
 
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-  background: #070A0E;
-  color: var(--text-light);
-}
 
-.home-Hero-section__bg-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-.home-Hero-section__bg-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%);
-  z-index: 1;
-}
 
-.home-Hero-section__grid-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(0,194,211,0.03) 19px, rgba(0,194,211,0.03) 20px),
-    repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(0,194,211,0.03) 19px, rgba(0,194,211,0.03) 20px);
-  opacity: 0.4;
-}
 
-.home-Hero-section__container {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 24px 60px 24px;
-}
 
-.home-Hero-section__content {
-  max-width: 580px;
-  margin-inline-start: 0;
-}
 
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0 0 20px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
 
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0 0 24px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-  opacity: 0.92;
-}
 
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.78);
-  margin: 0 0 32px 0;
-  max-width: 520px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-}
 
-.home-Hero-section__cta-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
 
-.home-Hero-section__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  padding: 12px 18px;
-  border-radius: 6px;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
-  cursor: pointer;
-}
 
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18);
-}
 
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.24);
-}
 
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  transform: translateY(-3px);
-  border-color: rgba(234,242,255,0.35);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.48), 0 0 28px rgba(0,194,211,0.28);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  opacity: 0.5;
-  font-size: 10px;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-  }
-  
-  .home-Hero-section__container {
-    padding: 100px 16px 40px 16px;
-  }
-  
-  .home-Hero-section__content {
-    max-width: 100%;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.65;
-    margin-bottom: 24px;
-  }
-  
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  
-  .home-Hero-section__btn {
-    width: 100%;
-    padding: 14px 18px;
-  }
-  
-  .home-Hero-section__status-strip {
-    font-size: 11px;
-    gap: 8px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section { position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: visible; background: #070A0E; display: flex; align-items: center; justify-content: flex-start; padding: 0; margin: 0; color: #EAF2FF; } .home-Hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; z-index: 0; } .home-Hero-background::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%); z-index: 1; } .home-Hero-dotted-grid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(234,242,255,0.03) 39px, rgba(234,242,255,0.03) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(234,242,255,0.03) 39px, rgba(234,242,255,0.03) 40px); z-index: 1; pointer-events: none; } .home-Hero-content-wrapper { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: flex-start; } .home-Hero-content { max-width: 580px; width: 100%; } .home-Hero-headline { font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 52px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.05; color: #EAF2FF; margin: 0 0 20px 0; text-shadow: 0 2px 18px rgba(0,0,0,0.75); text-align: start; } .home-Hero-subheadline { font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 22px; font-weight: 900; line-height: 1.2; color: #EAF2FF; margin: 0 0 24px 0; text-shadow: 0 2px 18px rgba(0,0,0,0.75); text-align: start; } .home-Hero-description { font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.7; color: rgba(234,242,255,0.78); margin: 0 0 32px 0; text-shadow: 0 2px 12px rgba(0,0,0,0.6); text-align: start; max-width: 520px; } .home-Hero-cta-row { display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; } .home-Hero-btn { font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 800; line-height: 1; padding: 12px 18px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease; cursor: pointer; white-space: nowrap; } .home-Hero-btn-primary { background: #B9F029; color: #0B1118; border: 1px solid rgba(0,0,0,0.15); box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18); } .home-Hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.25); background: #C5F945; } .home-Hero-btn-secondary { background: transparent; color: #EAF2FF; border: 1px solid rgba(234,242,255,0.20); box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22); } .home-Hero-btn-secondary:hover { transform: translateY(-3px); border-color: rgba(234,242,255,0.35); box-shadow: 0 0 0 1px rgba(0,194,211,0.50), 0 0 28px rgba(0,194,211,0.30); background: rgba(0,194,211,0.08); } .home-Hero-status-strip { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; font-weight: 600; color: rgba(234,242,255,0.68); text-align: start; } .home-Hero-status-item { white-space: nowrap; } .home-Hero-status-dot { color: rgba(234,242,255,0.40); font-weight: 400; } @media (max-width: 768px) { .home-Hero-section { height: auto; min-height: 100vh; padding-top: 100px; padding-bottom: 60px; } .home-Hero-content-wrapper { padding: 0 16px; } .home-Hero-content { max-width: 100%; } .home-Hero-headline { font-size: 36px; line-height: 1.1; margin-bottom: 16px; } .home-Hero-subheadline { font-size: 18px; margin-bottom: 20px; } .home-Hero-description { font-size: 14px; line-height: 1.65; margin-bottom: 24px; } .home-Hero-cta-row { flex-direction: column; gap: 12px; margin-bottom: 24px; } .home-Hero-btn { width: 100%; justify-content: center; padding: 14px 20px; font-size: 15px; } .home-Hero-status-strip { font-size: 11px; gap: 8px; flex-direction: column; align-items: flex-start; } .home-Hero-status-dot { display: none; } .home-Hero-status-item { display: block; width: 100%; } }
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-  background: #070A0E;
-  color: var(--text-light);
-}
-
-.home-Hero-section__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-.home-Hero-section__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.home-Hero-section__grid-texture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(234,242,255,0.02) 19px, rgba(234,242,255,0.02) 20px),
-    repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(234,242,255,0.02) 19px, rgba(234,242,255,0.02) 20px);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.home-Hero-section__content-wrapper {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.home-Hero-section__content {
-  max-width: 580px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-  margin: 0;
-}
-
-.home-Hero-section__subtitle {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: rgba(234,242,255,0.72);
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-  margin: 0;
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.75;
-  color: rgba(234,242,255,0.72);
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-  margin: 0;
-  max-width: 520px;
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.home-Hero-section__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  padding: 12px 18px;
-  border-radius: 6px;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18);
-}
-
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.25);
-}
-
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  border-color: rgba(234,242,255,0.35);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.48), 0 0 28px rgba(0,194,211,0.28);
-  transform: translateY(-2px);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(234,242,255,0.10);
-}
-
-.home-Hero-section__status-item {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
-}
-
-.home-Hero-section__status-dot {
-  color: rgba(0,194,211,0.45);
-  font-size: 12px;
-  line-height: 1;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    padding-top: 100px;
-  }
-  
-  .home-Hero-section__content-wrapper {
-    padding: 0 16px;
-  }
-  
-  .home-Hero-section__content {
-    max-width: 100%;
-    gap: 16px;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-  
-  .home-Hero-section__subtitle {
-    font-size: 16px;
-    line-height: 1.45;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 13px;
-    line-height: 1.65;
-  }
-  
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 8px;
-  }
-  
-  .home-Hero-section__btn {
-    width: 100%;
-    padding: 14px 18px;
-  }
-  
-  .home-Hero-section__status-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    margin-top: 12px;
-    padding-top: 12px;
-  }
-  
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-  
-  .home-Hero-section__status-item {
-    font-size: 11px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .home-Hero-section__headline {
-    font-size: 44px;
-  }
-  
-  .home-Hero-section__subtitle {
-    font-size: 17px;
-  }
-  
-  .home-Hero-section__content {
-    max-width: 540px;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: #070A0E;
-  color: var(--text-light);
-}
-
-.home-Hero-section__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-.home-Hero-section__background::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%);
-  z-index: 1;
-}
-
-.home-Hero-section__dotted-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(234,242,255,0.03) 19px, rgba(234,242,255,0.03) 20px),
-    repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(234,242,255,0.03) 19px, rgba(234,242,255,0.03) 20px);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.home-Hero-section__container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  z-index: 10;
-}
-
-.home-Hero-section__content {
-  max-width: 620px;
-  margin-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-  margin: 0;
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: rgba(234,242,255,0.72);
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-  margin: 0;
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.75;
-  color: rgba(234,242,255,0.72);
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-  margin: 0;
-  max-width: 540px;
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.home-Hero-section__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 6px;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  text-decoration: none;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.home-Hero-section__btn:hover {
-  transform: translateY(-3px);
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18);
-}
-
-.home-Hero-section__btn--primary:hover {
-  box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.24);
-}
-
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  border-color: rgba(0,194,211,0.50);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.50), 0 0 28px rgba(0,194,211,0.30);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(234,242,255,0.08);
-}
-
-.home-Hero-section__status-item {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-}
-
-.home-Hero-section__status-dot {
-  color: rgba(0,194,211,0.50);
-  font-size: 12px;
-  line-height: 1;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    padding-top: 100px;
-  }
-
-  .home-Hero-section__container {
-    padding: 0 16px;
-  }
-
-  .home-Hero-section__content {
-    max-width: 100%;
-    gap: 16px;
-  }
-
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-
-  .home-Hero-section__subheadline {
-    font-size: 16px;
-  }
-
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .home-Hero-section__btn {
-    width: 100%;
-    padding: 14px 18px;
-  }
-
-  .home-Hero-section__status-strip {
-    gap: 8px;
-    margin-top: 8px;
-    padding-top: 12px;
-  }
-
-  .home-Hero-section__status-item {
-    font-size: 11px;
-  }
-
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-
-  .home-Hero-section__status-strip {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section { position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: visible; background: #070A0E; display: flex; align-items: center; direction: rtl; } .home-Hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; z-index: 0; } .home-Hero-background::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%); z-index: 1; } .home-Hero-background::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%); z-index: 2; } .home-Hero-dotted-grid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle, rgba(234,242,255,0.04) 1px, transparent 1px); background-size: 24px 24px; opacity: 0.35; z-index: 3; pointer-events: none; } .home-Hero-content-wrapper { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 32px; } .home-Hero-content { max-width: 580px; margin-inline-start: 0; } .home-Hero-h1 { font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 52px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.05; color: #EAF2FF; margin: 0 0 20px 0; text-shadow: 0 2px 18px rgba(0,0,0,0.75), 0 4px 32px rgba(0,0,0,0.65); } .home-Hero-h3 { font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 22px; font-weight: 900; line-height: 1.2; color: #EAF2FF; margin: 0 0 18px 0; text-shadow: 0 2px 18px rgba(0,0,0,0.75); opacity: 0.92; } .home-Hero-paragraph { font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.7; color: rgba(234,242,255,0.78); margin: 0 0 32px 0; text-shadow: 0 2px 12px rgba(0,0,0,0.70); max-width: 540px; } .home-Hero-cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; } .home-Hero-btn { font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 800; line-height: 1; padding: 12px 18px; border-radius: 6px; text-decoration: none; display: inline-block; transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease; cursor: pointer; } .home-Hero-btn-primary { background: #B9F029; color: #0B1118; border: 1px solid rgba(0,0,0,0.15); box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18); } .home-Hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.25); background: #C5F542; } .home-Hero-btn-secondary { background: transparent; color: #EAF2FF; border: 1px solid rgba(234,242,255,0.20); box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22); } .home-Hero-btn-secondary:hover { transform: translateY(-3px); border-color: rgba(234,242,255,0.35); box-shadow: 0 0 0 1px rgba(0,194,211,0.50), 0 0 28px rgba(0,194,211,0.30); background: rgba(0,194,211,0.08); } .home-Hero-status-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; font-weight: 400; line-height: 1.4; color: rgba(234,242,255,0.68); text-shadow: 0 1px 8px rgba(0,0,0,0.60); } .home-Hero-status-item { white-space: nowrap; } .home-Hero-status-separator { opacity: 0.5; } @media (max-width: 768px) { .home-Hero-section { height: auto; min-height: 100vh; padding-top: 120px; padding-bottom: 60px; } .home-Hero-content-wrapper { padding: 0 20px; } .home-Hero-content { max-width: 100%; } .home-Hero-h1 { font-size: 36px; line-height: 1.1; margin-bottom: 16px; } .home-Hero-h3 { font-size: 18px; margin-bottom: 14px; } .home-Hero-paragraph { font-size: 14px; line-height: 1.6; margin-bottom: 24px; } .home-Hero-cta-row { flex-direction: column; gap: 12px; } .home-Hero-btn { width: 100%; text-align: center; padding: 14px 20px; } .home-Hero-status-strip { font-size: 11px; gap: 8px; } .home-Hero-status-item { font-size: 11px; } }
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; background: #070A0E; color: var(--text-light); padding: 0 24px; } .home-Hero-section__bg-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; z-index: 0; } .home-Hero-section__scrim { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%); z-index: 1; pointer-events: none; } .home-Hero-section__grid-texture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(0,194,211,0.04) 19px, rgba(0,194,211,0.04) 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(0,194,211,0.04) 19px, rgba(0,194,211,0.04) 20px); z-index: 2; pointer-events: none; opacity: 0.6; } .home-Hero-section__container { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; } .home-Hero-section__content { max-width: 580px; margin-inline-start: 0; } .home-Hero-section__h1 { font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 52px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.05; color: #EAF2FF; margin: 0 0 20px 0; text-shadow: 0 2px 18px rgba(0,0,0,0.75), 0 4px 32px rgba(0,0,0,0.55); } .home-Hero-section__h3 { font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 22px; font-weight: 900; line-height: 1.2; color: #EAF2FF; margin: 0 0 24px 0; text-shadow: 0 2px 18px rgba(0,0,0,0.75); opacity: 0.88; } .home-Hero-section__paragraph { font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 700; line-height: 1.7; color: rgba(234,242,255,0.78); margin: 0 0 32px 0; text-shadow: 0 2px 12px rgba(0,0,0,0.65); max-width: 520px; } .home-Hero-section__cta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; } .home-Hero-section__btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 6px; font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif; font-weight: 800; font-size: 14px; line-height: 1; text-decoration: none; transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease; cursor: pointer; white-space: nowrap; } .home-Hero-section__btn--primary { background: #B9F029; color: #0B1118; border: 1px solid rgba(0,0,0,0.15); box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18); } .home-Hero-section__btn--primary:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.45), 0 0 28px rgba(185,240,41,0.26); } .home-Hero-section__btn--secondary { background: transparent; color: #EAF2FF; border: 1px solid rgba(234,242,255,0.20); box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22); } .home-Hero-section__btn--secondary:hover { transform: translateY(-3px); background: rgba(0,194,211,0.08); border-color: rgba(0,194,211,0.35); box-shadow: 0 0 0 1px rgba(0,194,211,0.55), 0 0 28px rgba(0,194,211,0.32); } .home-Hero-section__status-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; font-weight: 400; line-height: 1.4; color: rgba(234,242,255,0.68); text-shadow: 0 1px 8px rgba(0,0,0,0.55); } .home-Hero-section__status-item { white-space: nowrap; } .home-Hero-section__status-dot { opacity: 0.5; } @media (max-width: 768px) { .home-Hero-section { min-height: 100vh; padding: 120px 16px 60px 16px; align-items: flex-start; justify-content: center; } .home-Hero-section__content { max-width: 100%; margin-inline-start: 0; } .home-Hero-section__h1 { font-size: 36px; line-height: 1.1; margin-bottom: 16px; } .home-Hero-section__h3 { font-size: 18px; margin-bottom: 20px; } .home-Hero-section__paragraph { font-size: 15px; line-height: 1.65; margin-bottom: 28px; } .home-Hero-section__cta-row { flex-direction: column; gap: 12px; margin-bottom: 24px; } .home-Hero-section__btn { width: 100%; padding: 14px 18px; } .home-Hero-section__status-strip { font-size: 11px; gap: 8px; } .home-Hero-section__status-item { font-size: 11px; } }
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: #070A0E;
-  color: var(--text-light);
-  overflow: hidden;
-  direction: rtl;
-}
-
-.home-Hero-section__bg-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-.home-Hero-section__bg-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, #070A0E 100%);
-  z-index: 1;
-}
-
-.home-Hero-section__grid-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,194,211,0.04) 39px, rgba(0,194,211,0.04) 40px),
-    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,194,211,0.04) 39px, rgba(0,194,211,0.04) 40px);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.home-Hero-section__container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  z-index: 10;
-}
-
-.home-Hero-section__content-group {
-  max-width: 580px;
-  margin-inline-start: 0;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0 0 20px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0 0 24px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.78);
-  margin: 0 0 32px 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 32px;
-}
-
-.home-Hero-section__btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 6px;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  cursor: pointer;
-  text-shadow: none;
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18);
-}
-
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.24);
-}
-
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  border-color: rgba(234,242,255,0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.48), 0 0 28px rgba(0,194,211,0.30);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  color: rgba(0,194,211,0.50);
-  font-weight: 700;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    padding-top: 100px;
-  }
-  
-  .home-Hero-section__container {
-    padding: 0 16px;
-  }
-  
-  .home-Hero-section__content-group {
-    max-width: 100%;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 15px;
-    margin-bottom: 28px;
-  }
-  
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-  
-  .home-Hero-section__btn {
-    width: 100%;
-    text-align: center;
-    padding: 14px 18px;
-  }
-  
-  .home-Hero-section__status-strip {
-    font-size: 11px;
-    gap: 8px;
-  }
-  
-  .home-Hero-section__status-item {
-    flex: 0 0 auto;
-  }
-}
-</style>
 
           <style id="zappy-cta-mobile-style">
             /* Hide CTA list item on desktop (tablets and up) */
@@ -2971,1945 +1624,343 @@
             })();
           </script>
         
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  min-height: 600px;
-  overflow: hidden;
-  background: #070A0E;
-  display: flex;
-  align-items: center;
-  direction: rtl;
-}
 
-.home-Hero-section__bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-}
 
-.home-Hero-section__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.70) 40%, rgba(7,10,14,0.55) 65%, rgba(7,10,14,0.15) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
 
-.home-Hero-section__texture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(234,242,255,0.012) 19px, rgba(234,242,255,0.012) 20px),
-    repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(234,242,255,0.012) 19px, rgba(234,242,255,0.012) 20px);
-  z-index: 2;
-  pointer-events: none;
-}
 
-.home-Hero-section__content {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-}
 
-.home-Hero-section__content-wrapper {
-  max-width: 560px;
-  margin-inline-start: 0;
-}
 
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0 0 20px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
 
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0 0 18px 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
 
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.78);
-  margin: 0 0 28px 0;
-  text-shadow: 0 2px 14px rgba(0,0,0,0.70);
-}
 
-.home-Hero-section__cta-row {
-  display: flex;
-  gap: 14px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-}
 
-.home-Hero-section__btn {
-  display: inline-block;
-  text-decoration: none;
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  padding: 12px 18px;
-  border-radius: 6px;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.50);
-  cursor: pointer;
-}
 
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18), 0 10px 24px rgba(0,0,0,0.35);
-}
 
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(185,240,41,0.40), 0 0 28px rgba(185,240,41,0.24), 0 14px 32px rgba(0,0,0,0.40);
-}
 
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-}
 
-.home-Hero-section__btn--secondary:hover {
-  transform: translateY(-2px);
-  border-color: rgba(234,242,255,0.35);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.40);
-}
 
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 1px 10px rgba(0,0,0,0.65);
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  opacity: 0.5;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 100px;
-  }
-
-  .home-Hero-section__content {
-    padding: 32px 16px;
-    min-height: auto;
-  }
-
-  .home-Hero-section__content-wrapper {
-    max-width: 100%;
-  }
-
-  .home-Hero-section__headline {
-    font-size: 36px;
-    margin-bottom: 16px;
-  }
-
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    margin-bottom: 14px;
-  }
-
-  .home-Hero-section__description {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  .home-Hero-section__cta-row {
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .home-Hero-section__btn {
-    font-size: 13px;
-    padding: 10px 16px;
-  }
-
-  .home-Hero-section__status-strip {
-    font-size: 11px;
-    gap: 8px;
-  }
-
-  .home-Hero-section__overlay {
-    background: linear-gradient(90deg, rgba(7,10,14,0.90) 0%, rgba(7,10,14,0.75) 60%, rgba(7,10,14,0.60) 100%);
-  }
-}
-
-@media (max-width: 480px) {
-  .home-Hero-section__headline {
-    font-size: 28px;
-  }
-
-  .home-Hero-section__subheadline {
-    font-size: 16px;
-  }
-
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-  }
-
-  .home-Hero-section__btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .home-Hero-section__status-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-}
-</style>
 
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .home-Hero-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: visible;
-  background: #070A0E;
-  color: var(--text-light);
-}
-
-.home-Hero-section__bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
-}
-
-.home-Hero-section__dotted-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(234, 242, 255, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0.5;
-}
-
-.home-Hero-section__overlay-scrim {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(7, 10, 14, 0.92) 0%, rgba(7, 10, 14, 0.85) 35%, rgba(7, 10, 14, 0.55) 55%, rgba(7, 10, 14, 0.15) 100%);
-  pointer-events: none;
-  z-index: 3;
-}
-
-.home-Hero-section__bottom-fade {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(180deg, rgba(7, 10, 14, 0) 0%, rgba(7, 10, 14, 0.35) 40%, #070A0E 100%);
-  pointer-events: none;
-  z-index: 4;
-}
-
-.home-Hero-section__content-wrapper {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.home-Hero-section__content-group {
-  max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
-  margin: 0;
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
-  margin: 0;
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234, 242, 255, 0.78);
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.65);
-  margin: 0;
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.home-Hero-section__btn-primary {
-  display: inline-block;
-  background: transparent;
-  color: #EAF2FF;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid #00C2D3;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 1px rgba(0, 194, 211, 0.38), 0 0 22px rgba(0, 194, 211, 0.22);
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
-  cursor: pointer;
-}
-
-.home-Hero-section__btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 0 1px rgba(0, 194, 211, 0.5), 0 0 32px rgba(0, 194, 211, 0.35);
-  background: rgba(0, 194, 211, 0.08);
-}
-
-.home-Hero-section__btn-secondary {
-  display: inline-block;
-  background: transparent;
-  color: #EAF2FF;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid rgba(234, 242, 255, 0.20);
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
-  cursor: pointer;
-}
-
-.home-Hero-section__btn-secondary:hover {
-  transform: translateY(-3px);
-  border-color: rgba(234, 242, 255, 0.35);
-  background: rgba(234, 242, 255, 0.05);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
-  flex-wrap: wrap;
-}
-
-.home-Hero-section__status-item {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234, 242, 255, 0.68);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  font-size: 12px;
-  color: rgba(234, 242, 255, 0.4);
-  line-height: 1;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    padding-top: 100px;
-  }
-
-  .home-Hero-section__content-wrapper {
-    padding: 0 16px;
-    min-height: calc(100vh - 100px);
-  }
-
-  .home-Hero-section__content-group {
-    max-width: 100%;
-    gap: 16px;
-  }
-
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-
-  .home-Hero-section__cta-row {
-    gap: 12px;
-    margin-top: 4px;
-  }
-
-  .home-Hero-section__btn-primary,
-  .home-Hero-section__btn-secondary {
-    padding: 10px 16px;
-    font-size: 13px;
-  }
-
-  .home-Hero-section__status-strip {
-    gap: 8px;
-    margin-top: 4px;
-  }
-
-  .home-Hero-section__status-item {
-    font-size: 11px;
-  }
-
-  .home-Hero-section__status-dot {
-    font-size: 11px;
-  }
-
-  .home-Hero-section__dotted-grid {
-    background-size: 18px 18px;
-  }
-
-  .home-Hero-section__bottom-fade {
-    height: 120px;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  min-height: 600px;
-  overflow: visible;
-  background: #070A0E;
-  color: var(--text-light);
-  display: flex;
-  align-items: center;
-  direction: rtl;
-}
-
-.home-Hero-section__placeholder-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  z-index: -100;
-}
-
-.home-Hero-section__background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.home-Hero-section__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(7,10,14,0.82) 0%, rgba(7,10,14,0.50) 50%, rgba(7,10,14,0.20) 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.home-Hero-section__bottom-fade {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 12%;
-  background: linear-gradient(180deg, rgba(7,10,14,0) 0%, rgba(7,10,14,0.65) 100%);
-  z-index: 3;
-  pointer-events: none;
-}
-
-.home-Hero-section__dotted-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(234,242,255,0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  z-index: 4;
-  pointer-events: none;
-}
-
-.home-Hero-section__vignette {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(7,10,14,0.12) 100%);
-  z-index: 4;
-  pointer-events: none;
-}
-
-.home-Hero-section__container {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.home-Hero-section__content-group {
-  max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.78);
-  margin: 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 8px;
-}
-
-.home-Hero-section__btn-primary {
-  background: transparent;
-  color: #00C2D3;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid #00C2D3;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  display: inline-block;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.58), 0 0 32px rgba(0,194,211,0.38);
-  background: rgba(0,194,211,0.08);
-}
-
-.home-Hero-section__btn-secondary {
-  background: transparent;
-  color: #EAF2FF;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid rgba(234,242,255,0.20);
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  display: inline-block;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease, color 220ms ease;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__btn-secondary:hover {
-  transform: translateY(-3px);
-  border-color: rgba(234,242,255,0.40);
-  background: rgba(234,242,255,0.06);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  margin-top: 12px;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75);
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  color: rgba(234,242,255,0.38);
-  user-select: none;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    height: auto;
-    padding-top: 100px;
-  }
-  
-  .home-Hero-section__container {
-    padding: 0 16px;
-    min-height: calc(100vh - 100px);
-  }
-  
-  .home-Hero-section__content-group {
-    max-width: 100%;
-    gap: 16px;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  .home-Hero-section__cta-row {
-    gap: 12px;
-    margin-top: 4px;
-  }
-  
-  .home-Hero-section__btn-primary,
-  .home-Hero-section__btn-secondary {
-    padding: 10px 16px;
-    font-size: 13px;
-  }
-  
-  .home-Hero-section__status-strip {
-    font-size: 11px;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  
-  .home-Hero-section__status-item {
-    white-space: normal;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  min-height: 600px;
   overflow: visible;
   background-color: #070A0E;
+  color: var(--text-light);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
+  direction: rtl;
 }
 
-.home-Hero-section__background-image {
+/* ── Background layers ── */
+.home-Hero-section .hero-bg-wrapper {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
-.home-Hero-section__dotted-grid {
+.home-Hero-section .hero-bg-img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(234, 242, 255, 0.02) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 1;
+  inset: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.home-Hero-section__overlay-gradient {
+/* Localized scrim: heavy on the right (RTL start) fading to transparent on the left */
+.home-Hero-section .hero-scrim-main {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(7, 10, 14, 0.92) 0%, rgba(7, 10, 14, 0.55) 55%, rgba(7, 10, 14, 0.15) 100%);
+  inset: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(7,10,14,0.44) 0%,
+    rgba(7,10,14,0.38) 30%,
+    rgba(7,10,14,0.18) 60%,
+    rgba(7,10,14,0.04) 100%
+  );
   pointer-events: none;
-  z-index: 2;
 }
 
-.home-Hero-section__bottom-fade {
+/* Soft bottom fade – never exceeds ~0.25 */
+.home-Hero-section .hero-scrim-bottom {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20%;
-  background: linear-gradient(180deg, rgba(7, 10, 14, 0) 0%, rgba(7, 10, 14, 0.25) 100%);
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7,10,14,0.00) 0%,
+    rgba(7,10,14,0.00) 78%,
+    rgba(7,10,14,0.22) 100%
+  );
   pointer-events: none;
-  z-index: 3;
 }
 
-.home-Hero-section__content-wrapper {
+/* Dotted grid texture – ≤0.02 opacity, decorative only */
+.home-Hero-section .hero-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(234,242,255,0.55) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.018;
+  pointer-events: none;
+}
+
+/* ── Content wrapper ── */
+.home-Hero-section .hero-content-wrapper {
   position: relative;
   z-index: 10;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 140px 48px 80px;
   display: flex;
+  justify-content: flex-start; /* RTL: start = right side */
   align-items: center;
-  justify-content: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.home-Hero-section__content-group {
+/* ── Content group: max 560px wide ── */
+.home-Hero-section .hero-content-group {
   max-width: 560px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  color: var(--text-light);
+  align-items: flex-start;
+  gap: 0;
 }
 
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234, 242, 255, 0.78);
-  margin: 0;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.65);
-}
-
-.home-Hero-section__cta-row {
+/* ── Eyebrow ── */
+.home-Hero-section .hero-eyebrow {
   display: flex;
-  gap: 14px;
-  margin-top: 8px;
-  flex-wrap: wrap;
-}
-
-.home-Hero-section__btn-primary {
-  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: #00C2D3;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 194, 211, 0.38);
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px rgba(0, 194, 211, 0.38), 0 0 22px rgba(0, 194, 211, 0.22);
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  cursor: pointer;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-.home-Hero-section__btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 0 1px rgba(0, 194, 211, 0.50), 0 0 28px rgba(0, 194, 211, 0.32);
-  background: rgba(0, 194, 211, 0.08);
+.home-Hero-section .hero-eyebrow-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00C2D3;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(0,194,211,0.55);
 }
 
-.home-Hero-section__btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: #EAF2FF;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid rgba(234, 242, 255, 0.20);
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  cursor: pointer;
-}
-
-.home-Hero-section__btn-secondary:hover {
-  transform: translateY(-3px);
-  background: rgba(234, 242, 255, 0.08);
-  border-color: rgba(234, 242, 255, 0.32);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 12px;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+.home-Hero-section .hero-eyebrow-text {
+  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 12px;
-  font-weight: 600;
-  color: rgba(234, 242, 255, 0.68);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
-  flex-wrap: wrap;
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-separator {
-  color: rgba(234, 242, 255, 0.40);
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 60px;
-  }
-  
-  .home-Hero-section__content-wrapper {
-    padding: 0 16px;
-  }
-  
-  .home-Hero-section__content-group {
-    max-width: 100%;
-    gap: 14px;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-  
-  .home-Hero-section__btn-primary,
-  .home-Hero-section__btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .home-Hero-section__status-strip {
-    font-size: 11px;
-    gap: 8px;
-    justify-content: flex-start;
-  }
-  
-  .home-Hero-section__overlay-gradient {
-    background: linear-gradient(90deg, rgba(7, 10, 14, 0.88) 0%, rgba(7, 10, 14, 0.75) 100%);
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-  background: #070A0E;
-}
-
-.home-Hero-section__bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-}
-
-.home-Hero-section__texture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(234,242,255,0.012) 2px, rgba(234,242,255,0.012) 4px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(234,242,255,0.012) 2px, rgba(234,242,255,0.012) 4px);
-  background-size: 20px 20px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.home-Hero-section__overlay-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.home-Hero-section__overlay-gradient::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 15%;
-  background: linear-gradient(180deg, rgba(7,10,14,0) 0%, rgba(7,10,14,0.25) 100%);
-  pointer-events: none;
-}
-
-.home-Hero-section__content-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  z-index: 10;
-}
-
-.home-Hero-section__content {
-  max-width: 560px;
-  margin-inline-start: 0;
-  background: linear-gradient(135deg, rgba(7,10,14,0.42) 0%, rgba(7,10,14,0.28) 100%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 32px;
-  border-radius: 8px;
-  border: 1px solid rgba(234,242,255,0.08);
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #EAF2FF;
-  margin: 0 0 16px 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0 0 20px 0;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: #00C2D3;
   text-shadow: 0 1px 8px rgba(0,0,0,0.55);
 }
 
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.78);
-  margin: 0 0 28px 0;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.45);
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 24px;
-}
-
-.home-Hero-section__btn-primary {
-  display: inline-block;
-  background: transparent;
-  color: #EAF2FF;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid rgba(0,194,211,0.85);
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-}
-
-.home-Hero-section__btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.55), 0 0 28px rgba(0,194,211,0.35);
-  background: rgba(0,194,211,0.08);
-}
-
-.home-Hero-section__btn-secondary {
-  display: inline-block;
-  background: transparent;
-  color: #EAF2FF;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid rgba(234,242,255,0.20);
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  text-decoration: none;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-}
-
-.home-Hero-section__btn-secondary:hover {
-  transform: translateY(-2px);
-  border-color: rgba(234,242,255,0.35);
-  background: rgba(234,242,255,0.05);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(234,242,255,0.10);
-}
-
-.home-Hero-section__status-item {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
-}
-
-.home-Hero-section__status-dot {
-  font-size: 12px;
-  color: rgba(234,242,255,0.35);
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    padding-top: 100px;
-  }
-  
-  .home-Hero-section__content-wrapper {
-    padding: 0 16px;
-  }
-  
-  .home-Hero-section__content {
-    padding: 24px 20px;
-    max-width: 100%;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-    margin-bottom: 12px;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    margin-bottom: 16px;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .home-Hero-section__btn-primary,
-  .home-Hero-section__btn-secondary {
-    width: 100%;
-    text-align: center;
-    padding: 14px 18px;
-  }
-  
-  .home-Hero-section__status-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 100px;
-  padding-bottom: 60px;
-  padding-inline-start: 24px;
-  padding-inline-end: 24px;
-  overflow: visible;
-  background-color: #070A0E;
-  color: var(--text-light);
-}
-
-.home-Hero-section__bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-}
-
-.home-Hero-section__dotted-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(234, 242, 255, 0.02) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 1;
-}
-
-.home-Hero-section__overlay-scrim {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(7, 10, 14, 0.42) 0%, rgba(7, 10, 14, 0.18) 55%, rgba(7, 10, 14, 0.05) 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.home-Hero-section__content-wrapper {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.home-Hero-section__content-group {
-  max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: linear-gradient(135deg, rgba(7, 10, 14, 0.75) 0%, rgba(11, 17, 24, 0.65) 100%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 40px;
-  border-radius: 12px;
-  border: 1px solid rgba(234, 242, 255, 0.08);
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
-}
-
-.home-Hero-section__headline {
+/* ── H1 ── */
+.home-Hero-section .hero-h1 {
   font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 52px;
   font-weight: 900;
   letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: var(--text-light);
-  margin: 0;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234, 242, 255, 0.78);
-  margin: 0;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.home-Hero-section__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  padding: 12px 18px;
-  border-radius: 6px;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  cursor: pointer;
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 0 1px rgba(185, 240, 41, 0.30), 0 0 22px rgba(185, 240, 41, 0.18), 0 10px 24px rgba(0, 0, 0, 0.35);
-}
-
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(185, 240, 41, 0.40), 0 0 28px rgba(185, 240, 41, 0.24), 0 14px 32px rgba(0, 0, 0, 0.45);
-}
-
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: var(--text-light);
-  border: 1px solid rgba(234, 242, 255, 0.20);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  transform: translateY(-2px);
-  border-color: rgba(234, 242, 255, 0.35);
-  background: rgba(234, 242, 255, 0.05);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-top: 12px;
-  border-top: 1px solid rgba(234, 242, 255, 0.10);
-  margin-top: 8px;
-}
-
-.home-Hero-section__status-item {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234, 242, 255, 0.68);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
-}
-
-.home-Hero-section__status-dot {
-  font-size: 10px;
-  color: rgba(234, 242, 255, 0.40);
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    min-height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 40px;
-    padding-inline-start: 16px;
-    padding-inline-end: 16px;
-    align-items: flex-start;
-  }
-  
-  .home-Hero-section__content-group {
-    max-width: 100%;
-    padding: 24px;
-    gap: 16px;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-  
-  .home-Hero-section__cta-row {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  
-  .home-Hero-section__btn {
-    width: 100%;
-    justify-content: center;
-    padding: 14px 20px;
-  }
-  
-  .home-Hero-section__status-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  
-  .home-Hero-section__status-dot {
-    display: none;
-  }
-  
-  .home-Hero-section__status-item {
-    font-size: 11px;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: visible;
-  padding: 100px 24px 80px;
-  background: #070A0E;
-  color: var(--text-light);
-}
-
-.home-Hero-section__bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-}
-
-.home-Hero-section__scrim-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(7,10,14,0.92) 0%, rgba(7,10,14,0.55) 55%, rgba(7,10,14,0.15) 100%), linear-gradient(180deg, rgba(7,10,14,0.10) 0%, rgba(7,10,14,0.25) 90%, #070A0E 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.home-Hero-section__texture-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(234,242,255,0.02) 1px, transparent 1px);
-  background-size: 24px 24px;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 1;
-}
-
-.home-Hero-section__content-wrapper {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  min-height: calc(100vh - 180px);
-}
-
-.home-Hero-section__content-group {
-  max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  line-height: 1.08;
   color: #EAF2FF;
-  margin: 0;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75), 0 4px 8px rgba(0,0,0,0.5);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: #EAF2FF;
-  margin: 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
-  opacity: 0.92;
-}
-
-.home-Hero-section__description {
-  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.78);
-  margin: 0;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  max-width: 520px;
-}
-
-.home-Hero-section__cta-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.home-Hero-section__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  padding: 12px 18px;
-  border-radius: 6px;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
-}
-
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(0,194,211,0.48), 0 0 28px rgba(0,194,211,0.28);
-}
-
-.home-Hero-section__btn--secondary {
-  background: transparent;
-  color: #EAF2FF;
-  border: 1px solid rgba(234,242,255,0.20);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-
-.home-Hero-section__btn--secondary:hover {
-  transform: translateY(-2px);
-  border-color: rgba(234,242,255,0.35);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
-
-.home-Hero-section__status-strip {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-.home-Hero-section__status-item {
-  white-space: nowrap;
-}
-
-.home-Hero-section__status-dot {
-  opacity: 0.5;
-  user-select: none;
-}
-
-@media (max-width: 768px) {
-  .home-Hero-section {
-    padding: 100px 16px 60px;
-    min-height: 100vh;
-  }
-  
-  .home-Hero-section__content-wrapper {
-    min-height: calc(100vh - 160px);
-  }
-  
-  .home-Hero-section__content-group {
-    max-width: 100%;
-    gap: 16px;
-  }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  
-  .home-Hero-section__description {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-  
-  .home-Hero-section__cta-row {
-    gap: 12px;
-    margin-top: 4px;
-  }
-  
-  .home-Hero-section__btn {
-    font-size: 13px;
-    padding: 11px 16px;
-  }
-  
-  .home-Hero-section__status-strip {
-    font-size: 11px;
-    gap: 8px;
-    margin-top: 8px;
-  }
-}
-</style>
-
-<style data-zappy-section-v2-css="true">
-/* V2 Regenerated Section CSS */
-.home-Hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-  background-color: #070A0E;
-  color: var(--text-light);
-  direction: rtl;
-}
-
-.home-Hero-section__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.home-Hero-section__bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.home-Hero-section__scrim {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(90deg, rgba(7,10,14,0.42) 0%, rgba(7,10,14,0.18) 50%, rgba(7,10,14,0.05) 100%),
-    linear-gradient(180deg, rgba(7,10,14,0.08) 0%, rgba(7,10,14,0.20) 92%, rgba(7,10,14,0.25) 100%);
-  z-index: 1;
-}
-
-.home-Hero-section__texture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(234,242,255,0.015) 2px, rgba(234,242,255,0.015) 4px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(234,242,255,0.015) 2px, rgba(234,242,255,0.015) 4px);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.home-Hero-section__content-wrapper {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 16px 60px;
-}
-
-.home-Hero-section__content {
-  max-width: 560px;
-  margin-inline-start: 0;
-  margin-inline-end: auto;
-}
-
-.home-Hero-section__headline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: var(--text-light);
+  text-shadow: 0 2px 18px rgba(0,0,0,0.75), 0 1px 4px rgba(0,0,0,0.55);
+  margin: 0 0 16px 0;
   text-align: right;
+}
+
+.home-Hero-section .hero-h1-accent {
+  color: #EAF2FF;
+  position: relative;
+  display: inline-block;
+}
+
+.home-Hero-section .hero-h1-accent::after {
+  content: '';
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  margin-top: 4px;
+  background: linear-gradient(90deg, rgba(0,194,211,0) 0%, rgba(0,194,211,0.95) 50%, rgba(0,194,211,0) 100%);
+}
+
+/* ── H3 ── */
+.home-Hero-section .hero-h3 {
+  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgba(234,242,255,0.88);
+  text-shadow: 0 1px 10px rgba(0,0,0,0.65);
   margin: 0 0 20px 0;
-  text-shadow: 0 3px 20px rgba(0,0,0,0.65), 0 1px 4px rgba(0,0,0,0.85);
-}
-
-.home-Hero-section__subheadline {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text-light);
   text-align: right;
-  margin: 0 0 24px 0;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.60), 0 1px 3px rgba(0,0,0,0.75);
 }
 
-.home-Hero-section__description {
+/* ── Paragraph ── */
+.home-Hero-section .hero-para {
   font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: 600;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.86);
+  line-height: 1.75;
+  color: rgba(234,242,255,0.78);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.60);
+  margin: 0 0 28px 0;
   text-align: right;
-  margin: 0 0 32px 0;
-  text-shadow: 0 2px 14px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.70);
 }
 
-.home-Hero-section__cta-row {
+/* ── CTA Row ── */
+.home-Hero-section .hero-cta-row {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   gap: 14px;
   margin-bottom: 28px;
   flex-wrap: wrap;
 }
 
-.home-Hero-section__btn {
+/* Primary CTA */
+.home-Hero-section .hero-btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
   line-height: 1;
-  padding: 12px 18px;
+  text-decoration: none;
+  padding: 14px 28px;
   border-radius: 6px;
-  transition: all 220ms ease;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.home-Hero-section__btn--primary {
-  background: #B9F029;
-  color: #0B1118;
-  border: 1px solid rgba(0,0,0,0.15);
-  box-shadow: 
-    0 0 0 1px rgba(185,240,41,0.30),
-    0 0 22px rgba(185,240,41,0.18),
-    0 10px 24px rgba(0,0,0,0.35);
-}
-
-.home-Hero-section__btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 
-    0 0 0 1px rgba(185,240,41,0.40),
-    0 0 28px rgba(185,240,41,0.25),
-    0 14px 32px rgba(0,0,0,0.40);
-}
-
-.home-Hero-section__btn--secondary {
   background: transparent;
-  color: var(--text-light);
-  border: 1px solid rgba(234,242,255,0.30);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.20);
+  color: #EAF2FF;
+  border: 1.5px solid #00C2D3;
+  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22), 0 10px 24px rgba(0,0,0,0.35);
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+  white-space: nowrap;
 }
 
-.home-Hero-section__btn--secondary:hover {
-  border-color: rgba(0,194,211,0.45);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.18);
+.home-Hero-section .hero-btn-primary:hover {
+  background: rgba(0,194,211,0.12);
+  box-shadow: 0 0 0 1px rgba(0,194,211,0.60), 0 0 32px rgba(0,194,211,0.35), 0 12px 28px rgba(0,0,0,0.40);
   transform: translateY(-2px);
+  color: #EAF2FF;
 }
 
-.home-Hero-section__status-strip {
-  display: flex;
-  flex-direction: row-reverse;
+/* Secondary CTA */
+.home-Hero-section .hero-btn-secondary {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(234,242,255,0.86);
+  border: 1.5px solid rgba(234,242,255,0.22);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.30);
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+  white-space: nowrap;
+}
+
+.home-Hero-section .hero-btn-secondary:hover {
+  background: rgba(234,242,255,0.07);
+  border-color: rgba(234,242,255,0.45);
+  transform: translateY(-2px);
+  color: #EAF2FF;
+}
+
+/* ── Status strip ── */
+.home-Hero-section .hero-status-strip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 6px 10px;
+  text-align: right;
+}
+
+.home-Hero-section .hero-status-item {
   font-family: 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 12px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.68);
-  text-shadow: 0 1px 8px rgba(0,0,0,0.50);
-}
-
-.home-Hero-section__status-item {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(234,242,255,0.52);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
   white-space: nowrap;
 }
 
-.home-Hero-section__status-dot {
-  opacity: 0.5;
-  font-size: 10px;
+.home-Hero-section .hero-status-sep {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 12px;
+  color: rgba(0,194,211,0.45);
+  line-height: 1;
+  flex-shrink: 0;
 }
 
+/* ── Responsive: Tablet ── */
+@media (max-width: 1024px) {
+  .home-Hero-section .hero-content-wrapper {
+    padding: 130px 36px 70px;
+  }
+  .home-Hero-section .hero-h1 {
+    font-size: 44px;
+  }
+}
+
+/* ── Responsive: Mobile ── */
 @media (max-width: 768px) {
-  .home-Hero-section {
+  .home-Hero-section .hero-content-wrapper {
+    padding: 110px 20px 60px;
     min-height: 100vh;
+    align-items: flex-start;
   }
-  
-  .home-Hero-section__content-wrapper {
-    padding: 100px 16px 60px;
-  }
-  
-  .home-Hero-section__content {
+  .home-Hero-section .hero-content-group {
     max-width: 100%;
   }
-  
-  .home-Hero-section__headline {
-    font-size: 36px;
-    line-height: 1.1;
-    margin-bottom: 16px;
+  .home-Hero-section .hero-h1 {
+    font-size: 34px;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
   }
-  
-  .home-Hero-section__subheadline {
-    font-size: 18px;
-    margin-bottom: 20px;
+  .home-Hero-section .hero-h3 {
+    font-size: 16px;
   }
-  
-  .home-Hero-section__description {
-    font-size: 15px;
-    margin-bottom: 28px;
+  .home-Hero-section .hero-para {
+    font-size: 16px !important;
   }
-  
-  .home-Hero-section__cta-row {
+  .home-Hero-section .hero-cta-row {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-  }
-  
-  .home-Hero-section__btn {
     width: 100%;
-    padding: 14px 18px;
   }
-  
-  .home-Hero-section__status-strip {
-    font-size: 11px;
-    gap: 8px;
-    justify-content: flex-start;
+  .home-Hero-section .hero-btn-primary,
+  .home-Hero-section .hero-btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
   }
-  
-  .home-Hero-section__status-item {
+  .home-Hero-section .hero-status-strip {
+    gap: 4px 8px;
+  }
+  .home-Hero-section .hero-status-item {
     font-size: 11px;
+  }
+  .home-Hero-section .hero-scrim-main {
+    background: linear-gradient(
+      270deg,
+      rgba(7,10,14,0.55) 0%,
+      rgba(7,10,14,0.45) 40%,
+      rgba(7,10,14,0.20) 100%
+    );
   }
 }
 </style>
@@ -5354,33 +2405,54 @@
 
   
   <main>
-    <section class="home-Hero-section" data-layout-spec="Home-Hero" data-hero-type="fullscreen-scrim" data-zappy-section="true">
-  <div class="home-Hero-section__background">
-    <img alt="נוף לילה של עיר ישראלית מודרנית עם בניינים מוארים ופרויקטי התחדשות עירונית" class="home-Hero-section__bg-image" src="/assets/section-Home-Hero-home-Hero-image-1.webp" data-context="Cinematic night skyline photograph of a modern Israeli city (Tel Aviv or Jerusalem) with illuminated high-rise residential buildings, urban renewal construction sites visible, dramatic dark blue night sky with subtle city lights, professional architectural photography, shot from elevated perspective showing both renovated and under-construction buildings, conveying progress and urban transformation, high-quality real estate photography style" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" data-zappy-editable-image="true">
-    <div class="home-Hero-section__scrim"></div>
-    <div class="home-Hero-section__texture"></div>
+    <section class="home-Hero-section" data-layout-spec="Home-Hero" dir="rtl" data-zappy-section="true" data-hero-type="fullscreen-scrim">
+  <!-- Full-bleed background -->
+  <div class="hero-bg-wrapper">
+    <div class="hero-bg-img" style="background-image: url('assets/section-Home-Hero-home-Hero-image-1.webp'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+    <!-- Localized scrim: strong on right (RTL start), fades left -->
+    <div class="hero-scrim-main" aria-hidden="true"></div>
+    <!-- Subtle bottom fade -->
+    <div class="hero-scrim-bottom" aria-hidden="true"></div>
+    <!-- Dotted grid texture -->
+    <div class="hero-dot-grid" aria-hidden="true"></div>
   </div>
-  
-  <div class="home-Hero-section__content-wrapper">
-    <div class="home-Hero-section__content">
-      <h1 class="home-Hero-section__headline">התחדשות עירונית<br>בשליטה מלאה ושקיפות</h1>
-      <h3 class="home-Hero-section__subheadline">תיעוד מדויק, הדרכה רגועה וליווי צמוד לאורך כל התהליך</h3>
-      <p class="home-Hero-section__description">אנחנו מנהלים את כל שלבי ההתחדשות העירונית עבור דיירים וועדי בתים. מתכנון ראשוני ועד מסירת דירות מחודשות – עם תיעוד שוטף, שקיפות מלאה ומענה מהיר לכל שאלה.</p>
-      
-      <div class="home-Hero-section__cta-row">
-        <a href="/contact" class="home-Hero-section__btn home-Hero-section__btn--primary">שיחה עם מומחה</a>
-        <a href="/process" class="home-Hero-section__btn home-Hero-section__btn--secondary">לתהליך המלא</a>
+
+  <!-- Content -->
+  <div class="hero-content-wrapper">
+    <div class="hero-content-group">
+
+      <!-- Eyebrow label -->
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        <span class="hero-eyebrow-text">שגיא התחדשות עירונית</span>
       </div>
-      
-      <div class="home-Hero-section__status-strip">
-        <span class="home-Hero-section__status-item">שלב תכנון ואישורים</span>
-        <span class="home-Hero-section__status-dot">•</span>
-        <span class="home-Hero-section__status-item">24–36 חודשים ממוצע</span>
-        <span class="home-Hero-section__status-dot">•</span>
-        <span class="home-Hero-section__status-item">תיעוד דיגיטלי מלא</span>
-        <span class="home-Hero-section__status-dot">•</span>
-        <span class="home-Hero-section__status-item">מענה תוך 48 שעות</span>
+
+      <!-- H1 -->
+      <h1 class="hero-h1">התחדשות עירונית<br><span class="hero-h1-accent">בשליטה מלאה ושקיפות</span></h1>
+
+      <!-- H3 -->
+      <h3 class="hero-h3">תיעוד מדויק, הדרכה רגועה וליווי צמוד לאורך כל התהליך</h3>
+
+      <!-- Paragraph -->
+      <p class="hero-para">אנחנו מנהלים את כל שלבי ההתחדשות העירונית עבור דיירים וועדי בתים. מתכנון ראשוני ועד מסירת דירות מחודשות – עם תיעוד שוטף, שקיפות מלאה ומענה מהיר לכל שאלה.</p>
+
+      <!-- CTA Row -->
+      <div class="hero-cta-row">
+        <a href="/contact" class="hero-btn-primary">שיחה עם מומחה</a>
+        <a href="/process" class="hero-btn-secondary">לתהליך המלא</a>
       </div>
+
+      <!-- Status strip -->
+      <div class="hero-status-strip">
+        <span class="hero-status-item">שלב תכנון ואישורים</span>
+        <span class="hero-status-sep" aria-hidden="true">·</span>
+        <span class="hero-status-item">24–36 חודשים ממוצע</span>
+        <span class="hero-status-sep" aria-hidden="true">·</span>
+        <span class="hero-status-item">תיעוד דיגיטלי מלא</span>
+        <span class="hero-status-sep" aria-hidden="true">·</span>
+        <span class="hero-status-item">מענה תוך 48 שעות</span>
+      </div>
+
     </div>
   </div>
 </section>
