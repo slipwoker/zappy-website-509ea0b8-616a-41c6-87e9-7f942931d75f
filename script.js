@@ -495,6 +495,10 @@ window.onload = function() {
     }
 })();
 
+/* === NAVBAR SCROLL JS OVERRIDE START === */
+(function(){if(window._zappyNavScrollCleanup){window._zappyNavScrollCleanup();delete window._zappyNavScrollCleanup;}var nb=document.querySelector('nav.navbar,.navbar:not(.zappy-catalog-menu)');var cm=document.querySelector('.zappy-catalog-menu,#zappy-catalog-menu');function clr(){if(nb){nb.style.removeProperty('background');nb.style.removeProperty('background-color');nb.style.removeProperty('backdrop-filter');nb.style.removeProperty('-webkit-backdrop-filter');nb.style.removeProperty('box-shadow');nb.style.removeProperty('--frosted-text');nb.classList.remove('scrolled');}if(cm){cm.style.removeProperty('background');cm.style.removeProperty('background-color');cm.style.removeProperty('backdrop-filter');cm.style.removeProperty('-webkit-backdrop-filter');cm.classList.remove('scrolled');}}clr();window.addEventListener('scroll',clr,{passive:true});window._zappyNavScrollCleanup=function(){window.removeEventListener('scroll',clr);};})();
+/* === NAVBAR SCROLL JS OVERRIDE END === */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
@@ -981,6 +985,30 @@ window.onload = function() {
   } catch (e) {}
 })();
 /* END ZAPPY_FAQ_ACCORDION_TOGGLE */
+
+
+/* ZAPPY_NAV_SCROLL_PADDING */
+(function(){
+  try {
+    if (window.__zappyNavScrollPaddingInit) return;
+    window.__zappyNavScrollPaddingInit = true;
+    function updateScrollPadding() {
+      var nav = document.querySelector('nav.navbar') || document.querySelector('nav') || document.querySelector('header');
+      if (!nav) return;
+      var s = window.getComputedStyle(nav);
+      if (s.position !== 'fixed' && s.position !== 'sticky') return;
+      var h = nav.offsetHeight;
+      if (h > 0) document.documentElement.style.scrollPaddingTop = h + 'px';
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateScrollPadding, { once: true });
+    } else {
+      updateScrollPadding();
+    }
+    window.addEventListener('resize', updateScrollPadding, { passive: true });
+  } catch (e) {}
+})();
+/* END ZAPPY_NAV_SCROLL_PADDING */
 
 
 /* ZAPPY_CONTACT_FORM_PREVENT_DEFAULT */
