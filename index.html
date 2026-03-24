@@ -1640,6 +1640,8 @@
 
 
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .home-Hero-section {
@@ -1649,318 +1651,302 @@
   overflow: visible;
   background-color: #070A0E;
   color: var(--text-light);
+  direction: rtl;
   display: flex;
   align-items: center;
-  direction: rtl;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
 }
 
-/* ── Background layers ── */
-.home-Hero-section .hero-bg-wrapper {
+/* ── Background layer ── */
+.home-Hero-section__bg-wrap {
   position: absolute;
   inset: 0;
   z-index: 0;
   overflow: hidden;
 }
 
-.home-Hero-section .hero-bg-img {
+.home-Hero-section__bg-img {
   position: absolute;
   inset: 0;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0;
 }
 
-/* Localized scrim: heavy on the right (RTL start) fading to transparent on the left */
-.home-Hero-section .hero-scrim-main {
+/* Localized scrim: heavy on the right (content side in RTL), fades left */
+.home-Hero-section__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    270deg,
-    rgba(7,10,14,0.44) 0%,
-    rgba(7,10,14,0.38) 30%,
-    rgba(7,10,14,0.18) 60%,
-    rgba(7,10,14,0.04) 100%
-  );
+  z-index: 1;
+  background-image:
+    linear-gradient(
+      270deg,
+      rgba(7,10,14,0.42) 0%,
+      rgba(7,10,14,0.38) 30%,
+      rgba(7,10,14,0.14) 60%,
+      rgba(7,10,14,0.06) 80%,
+      rgba(7,10,14,0.00) 100%
+    );
   pointer-events: none;
 }
 
-/* Soft bottom fade – never exceeds ~0.25 */
-.home-Hero-section .hero-scrim-bottom {
+/* Very soft bottom fade — never exceeds ~0.25 opacity */
+.home-Hero-section__bottom-fade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(7,10,14,0.00) 0%,
-    rgba(7,10,14,0.00) 78%,
-    rgba(7,10,14,0.22) 100%
-  );
+  z-index: 2;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(7,10,14,0.00) 0%,
+      rgba(7,10,14,0.00) 70%,
+      rgba(7,10,14,0.18) 88%,
+      rgba(7,10,14,0.25) 100%
+    );
   pointer-events: none;
 }
 
-/* Dotted grid texture – ≤0.02 opacity, decorative only */
-.home-Hero-section .hero-dot-grid {
+/* Dotted grid texture — ≤0.02 opacity, purely decorative */
+.home-Hero-section__dot-grid {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(234,242,255,0.55) 1px, transparent 1px);
+  z-index: 3;
+  background-image: radial-gradient(circle, rgba(234,242,255,0.18) 1px, transparent 1px);
   background-size: 28px 28px;
-  opacity: 0.018;
+  opacity: 0.065;
   pointer-events: none;
 }
 
-/* ── Content wrapper ── */
-.home-Hero-section .hero-content-wrapper {
+/* ── Content container ── */
+.home-Hero-section__container {
   position: relative;
   z-index: 10;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 140px 48px 80px;
-  display: flex;
-  justify-content: flex-start; /* RTL: start = right side */
-  align-items: center;
-  min-height: 100vh;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
   box-sizing: border-box;
 }
 
-/* ── Content group: max 560px wide ── */
-.home-Hero-section .hero-content-group {
+/* ── Content group — constrained to ~560px, right-aligned in RTL ── */
+.home-Hero-section__content-group {
   max-width: 560px;
-  width: 100%;
+  margin-inline-start: 0;
+  margin-inline-end: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
-
-/* ── Eyebrow ── */
-.home-Hero-section .hero-eyebrow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.home-Hero-section .hero-eyebrow-dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #00C2D3;
-  flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(0,194,211,0.55);
-}
-
-.home-Hero-section .hero-eyebrow-text {
-  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: #00C2D3;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+  gap: 20px;
+  text-align: right;
 }
 
 /* ── H1 ── */
-.home-Hero-section .hero-h1 {
+.home-Hero-section__h1 {
   font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 52px;
+  font-size: clamp(2.4rem, 5vw, 3.25rem);
   font-weight: 900;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  line-height: 1.08;
-  color: #EAF2FF;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.75), 0 1px 4px rgba(0,0,0,0.55);
-  margin: 0 0 16px 0;
-  text-align: right;
+  color: var(--text-light);
+  margin: 0;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.65), 0 1px 4px rgba(0,0,0,0.50);
 }
 
-.home-Hero-section .hero-h1-accent {
-  color: #EAF2FF;
-  position: relative;
-  display: inline-block;
-}
-
-.home-Hero-section .hero-h1-accent::after {
-  content: '';
-  display: block;
-  height: 3px;
-  border-radius: 999px;
-  margin-top: 4px;
-  background: linear-gradient(90deg, rgba(0,194,211,0) 0%, rgba(0,194,211,0.95) 50%, rgba(0,194,211,0) 100%);
-}
-
-/* ── H3 ── */
-.home-Hero-section .hero-h3 {
+/* ── H3 reassurance ── */
+.home-Hero-section__h3 {
   font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.5;
-  color: rgba(234,242,255,0.88);
-  text-shadow: 0 1px 10px rgba(0,0,0,0.65);
-  margin: 0 0 20px 0;
-  text-align: right;
+  line-height: 1.45;
+  color: rgba(234,242,255,0.90);
+  margin: 0;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
 }
 
 /* ── Paragraph ── */
-.home-Hero-section .hero-para {
+.home-Hero-section__para {
   font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 16px !important;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.75;
-  color: rgba(234,242,255,0.78);
-  text-shadow: 0 1px 8px rgba(0,0,0,0.60);
-  margin: 0 0 28px 0;
-  text-align: right;
+  color: rgba(234,242,255,0.80);
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
+  max-width: 520px;
 }
 
-/* ── CTA Row ── */
-.home-Hero-section .hero-cta-row {
+/* ── CTA row ── */
+.home-Hero-section__cta-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 14px;
-  margin-bottom: 28px;
   flex-wrap: wrap;
+  margin-top: 4px;
 }
 
-/* Primary CTA */
-.home-Hero-section .hero-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* Primary CTA — accent outline + subtle glow */
+.home-Hero-section__btn-primary {
+  display: inline-block;
   font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 15px;
   font-weight: 800;
   line-height: 1;
-  text-decoration: none;
+  color: #0B1118;
+  background: #00D4FF;
   padding: 14px 28px;
   border-radius: 6px;
-  background: transparent;
-  color: #EAF2FF;
-  border: 1.5px solid #00C2D3;
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22), 0 10px 24px rgba(0,0,0,0.35);
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+  border: 1.5px solid rgba(0,212,255,0.80);
+  text-decoration: none;
+  box-shadow:
+    0 0 0 1px rgba(0,212,255,0.40),
+    0 0 22px rgba(0,212,255,0.28),
+    0 8px 24px rgba(0,0,0,0.40);
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
   white-space: nowrap;
+  cursor: pointer;
 }
 
-.home-Hero-section .hero-btn-primary:hover {
-  background: rgba(0,194,211,0.12);
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.60), 0 0 32px rgba(0,194,211,0.35), 0 12px 28px rgba(0,0,0,0.40);
+.home-Hero-section__btn-primary:hover {
+  background: #19DEFF;
+  box-shadow:
+    0 0 0 1px rgba(0,212,255,0.60),
+    0 0 32px rgba(0,212,255,0.40),
+    0 12px 32px rgba(0,0,0,0.50);
   transform: translateY(-2px);
-  color: #EAF2FF;
+  color: #0B1118;
 }
 
-/* Secondary CTA */
-.home-Hero-section .hero-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* Secondary CTA — outline only */
+.home-Hero-section__btn-secondary {
+  display: inline-block;
   font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 15px;
   font-weight: 800;
   line-height: 1;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 6px;
+  color: rgba(234,242,255,0.92);
   background: transparent;
-  color: rgba(234,242,255,0.86);
-  border: 1.5px solid rgba(234,242,255,0.22);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.30);
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+  padding: 13px 26px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(234,242,255,0.38);
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.30);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
   white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
 }
 
-.home-Hero-section .hero-btn-secondary:hover {
+.home-Hero-section__btn-secondary:hover {
+  border-color: rgba(234,242,255,0.65);
   background: rgba(234,242,255,0.07);
-  border-color: rgba(234,242,255,0.45);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.40);
   transform: translateY(-2px);
-  color: #EAF2FF;
+  color: var(--text-light);
 }
 
 /* ── Status strip ── */
-.home-Hero-section .hero-status-strip {
+.home-Hero-section__status-strip {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   gap: 6px 10px;
-  text-align: right;
-}
-
-.home-Hero-section .hero-status-item {
   font-family: 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.04em;
-  color: rgba(234,242,255,0.52);
-  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
-  white-space: nowrap;
+  color: rgba(234,242,255,0.55);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.45);
+  margin-top: 4px;
+  line-height: 1.6;
 }
 
-.home-Hero-section .hero-status-sep {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  color: rgba(0,194,211,0.45);
+.home-Hero-section__dot {
+  color: rgba(0,212,255,0.55);
+  font-size: 14px;
   line-height: 1;
-  flex-shrink: 0;
+  user-select: none;
 }
 
-/* ── Responsive: Tablet ── */
-@media (max-width: 1024px) {
-  .home-Hero-section .hero-content-wrapper {
-    padding: 130px 36px 70px;
+/* ── Responsive: Desktop ── */
+@media (min-width: 768px) {
+  .home-Hero-section {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    min-height: 100vh;
   }
-  .home-Hero-section .hero-h1 {
-    font-size: 44px;
+
+  .home-Hero-section__content-group {
+    gap: 22px;
+  }
+
+  .home-Hero-section__h1 {
+    font-size: 3.25rem;
+  }
+
+  .home-Hero-section__h3 {
+    font-size: 1.25rem;
+  }
+
+  .home-Hero-section__status-strip {
+    font-size: 12.5px;
   }
 }
 
 /* ── Responsive: Mobile ── */
-@media (max-width: 768px) {
-  .home-Hero-section .hero-content-wrapper {
-    padding: 110px 20px 60px;
-    min-height: 100vh;
+@media (max-width: 767px) {
+  .home-Hero-section {
+    padding-top: 100px;
+    padding-bottom: 60px;
     align-items: flex-start;
   }
-  .home-Hero-section .hero-content-group {
+
+  .home-Hero-section__container {
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+  }
+
+  .home-Hero-section__content-group {
     max-width: 100%;
+    gap: 16px;
   }
-  .home-Hero-section .hero-h1 {
-    font-size: 34px;
-    letter-spacing: -0.015em;
-    line-height: 1.12;
+
+  .home-Hero-section__h1 {
+    font-size: 2.1rem;
+    line-height: 1.15;
   }
-  .home-Hero-section .hero-h3 {
-    font-size: 16px;
+
+  .home-Hero-section__h3 {
+    font-size: 1.05rem;
   }
-  .home-Hero-section .hero-para {
-    font-size: 16px !important;
+
+  .home-Hero-section__cta-row {
+    gap: 10px;
   }
-  .home-Hero-section .hero-cta-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    width: 100%;
+
+  .home-Hero-section__btn-primary,
+  .home-Hero-section__btn-secondary {
+    font-size: 14px;
+    padding: 12px 20px;
   }
-  .home-Hero-section .hero-btn-primary,
-  .home-Hero-section .hero-btn-secondary {
-    width: 100%;
-    justify-content: center;
-    padding: 14px 20px;
-  }
-  .home-Hero-section .hero-status-strip {
+
+  .home-Hero-section__status-strip {
+    font-size: 11px;
     gap: 4px 8px;
   }
-  .home-Hero-section .hero-status-item {
-    font-size: 11px;
-  }
-  .home-Hero-section .hero-scrim-main {
-    background: linear-gradient(
-      270deg,
-      rgba(7,10,14,0.55) 0%,
-      rgba(7,10,14,0.45) 40%,
-      rgba(7,10,14,0.20) 100%
-    );
+}
+
+/* ── Large screens ── */
+@media (min-width: 1200px) {
+  .home-Hero-section__h1 {
+    font-size: 3.5rem;
   }
 }
 </style>
@@ -2405,52 +2391,46 @@
 
   
   <main>
-    <section class="home-Hero-section" data-layout-spec="Home-Hero" dir="rtl" data-zappy-section="true" data-hero-type="fullscreen-scrim">
-  <!-- Full-bleed background -->
-  <div class="hero-bg-wrapper">
-    <div class="hero-bg-img" style="background-image: url('assets/section-Home-Hero-home-Hero-image-1.webp'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
-    <!-- Localized scrim: strong on right (RTL start), fades left -->
-    <div class="hero-scrim-main" aria-hidden="true"></div>
-    <!-- Subtle bottom fade -->
-    <div class="hero-scrim-bottom" aria-hidden="true"></div>
-    <!-- Dotted grid texture -->
-    <div class="hero-dot-grid" aria-hidden="true"></div>
+    <section class="home-Hero-section" data-layout-spec="Home-Hero" dir="rtl" data-hero-type="fullscreen-scrim">
+  <!-- Full-bleed background image -->
+  <div class="home-Hero-section__bg-wrap">
+    <img class="home-Hero-section__bg-img" data-context="Cinematic night skyline of a modern Israeli city with tall residential buildings and construction cranes, dramatic dark sky with city lights glowing, urban renewal atmosphere, high-rise towers under development, professional architectural photography, ultra-wide angle, deep perspective, dark moody tones with warm building lights" width="1440" height="900" src="/assets/section-Home-Hero-home-Hero-image-1.webp" alt="קו רקיע עירוני לילי עם בניינים גבוהים בתהליך התחדשות עירונית" data-zappy-editable-image="true">
+    <!-- Localized scrim: strong on right (content side), fades to near-transparent on left -->
+    <div class="home-Hero-section__scrim" aria-hidden="true"></div>
+    <!-- Extremely subtle bottom fade -->
+    <div class="home-Hero-section__bottom-fade" aria-hidden="true"></div>
+    <!-- Subtle dotted grid texture -->
+    <div class="home-Hero-section__dot-grid" aria-hidden="true"></div>
   </div>
 
-  <!-- Content -->
-  <div class="hero-content-wrapper">
-    <div class="hero-content-group">
-
-      <!-- Eyebrow label -->
-      <div class="hero-eyebrow">
-        <span class="hero-eyebrow-dot"></span>
-        <span class="hero-eyebrow-text">שגיא התחדשות עירונית</span>
-      </div>
+  <!-- Main content -->
+  <div class="home-Hero-section__container">
+    <div class="home-Hero-section__content-group">
 
       <!-- H1 -->
-      <h1 class="hero-h1">התחדשות עירונית<br><span class="hero-h1-accent">בשליטה מלאה ושקיפות</span></h1>
+      <h1 class="home-Hero-section__h1">התחדשות עירונית —<br>ברורה, מתועדת, בשליטה.</h1>
 
-      <!-- H3 -->
-      <h3 class="hero-h3">תיעוד מדויק, הדרכה רגועה וליווי צמוד לאורך כל התהליך</h3>
+      <!-- H3 reassurance -->
+      <h3 class="home-Hero-section__h3">שקיפות מלאה, תיעוד בכל שלב, וליווי רגוע לאורך כל הדרך.</h3>
 
       <!-- Paragraph -->
-      <p class="hero-para">אנחנו מנהלים את כל שלבי ההתחדשות העירונית עבור דיירים וועדי בתים. מתכנון ראשוני ועד מסירת דירות מחודשות – עם תיעוד שוטף, שקיפות מלאה ומענה מהיר לכל שאלה.</p>
+      <p class="home-Hero-section__para">אנחנו מנהלים את כל תהליך ההתחדשות העירונית עבורכם — מהשלב הראשוני ועד לאכלוס. דיירים ועדי בתים מקבלים עדכונים שוטפים, מסמכים מסודרים, ונקודת קשר אחת אמינה. אין הפתעות — רק תהליך מנוהל ומתועד.</p>
 
-      <!-- CTA Row -->
-      <div class="hero-cta-row">
-        <a href="/contact" class="hero-btn-primary">שיחה עם מומחה</a>
-        <a href="/process" class="hero-btn-secondary">לתהליך המלא</a>
+      <!-- CTA row -->
+      <div class="home-Hero-section__cta-row">
+        <a href="/contact" class="home-Hero-section__btn-primary">שוחח עם מומחה</a>
+        <a href="/process" class="home-Hero-section__btn-secondary">ראה את התהליך</a>
       </div>
 
       <!-- Status strip -->
-      <div class="hero-status-strip">
-        
-        <span class="hero-status-sep" aria-hidden="true">·</span>
-        
-        <span class="hero-status-sep" aria-hidden="true">·</span>
-        
-        <span class="hero-status-sep" aria-hidden="true">·</span>
-        
+      <div class="home-Hero-section__status-strip" aria-label="נתוני פרויקט">
+        <span>שלב: ליווי פעיל</span>
+        <span class="home-Hero-section__dot" aria-hidden="true">·</span>
+        <span>משך טיפוסי: 18–36 חודשים</span>
+        <span class="home-Hero-section__dot" aria-hidden="true">·</span>
+        <span>תיעוד-ראשון</span>
+        <span class="home-Hero-section__dot" aria-hidden="true">·</span>
+        <span>מענה תוך ~24 שעות</span>
       </div>
 
     </div>
