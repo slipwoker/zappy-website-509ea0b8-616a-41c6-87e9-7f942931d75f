@@ -14,8 +14,8 @@ https://example.com/the-process
 https://example.com/thank-you
 שגיא - Thank You | שגיא
 
-### Page
-https://example.com/contact
+### צרו קשר
+https://example.com/contact-us
 
 ## Legal & Policy
 
