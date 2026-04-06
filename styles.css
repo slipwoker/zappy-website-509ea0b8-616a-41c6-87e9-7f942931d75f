@@ -6085,6 +6085,509 @@ nav.navbar .sub-menu li a:hover { color: #284f69 !important; background-color: r
 /* /Zappy custom logo size */
 
 
+/* Added Component Styles */
+/* ============================================================
+   SGAI TESTIMONIALS SECTION
+   שגיא התחדשות עירונית — ממליצים
+   ============================================================ */
+
+.sgai-testimonials {
+  position: relative;
+  background-color: #FAFAF8;
+  padding: 100px 20px 80px;
+  overflow: hidden;
+  direction: rtl;
+  font-family: Heebo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* ---- Background image ---- */
+.sgai-testimonials__bg-image-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sgai-testimonials__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.08;
+  filter: grayscale(30%) blur(1px);
+  display: block;
+  max-width: 100%;
+}
+
+/* ---- Decorative background shapes ---- */
+.sgai-testimonials__bg-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sgai-testimonials__bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.06;
+}
+
+.sgai-testimonials__bg-shape--1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #00D4FF 0%, transparent 70%);
+  top: -200px;
+  left: -150px;
+}
+
+.sgai-testimonials__bg-shape--2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #b0e8f0 0%, transparent 70%);
+  bottom: -100px;
+  right: -80px;
+  opacity: 0.09;
+}
+
+.sgai-testimonials__bg-shape--3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #d4eef2 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.05;
+}
+
+/* Architectural silhouette shapes */
+.sgai-testimonials__bg-arch {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.04;
+}
+
+.sgai-testimonials__bg-arch--1 {
+  right: 5%;
+  width: 180px;
+  height: 260px;
+  background: linear-gradient(to top, #4A4A4A 0%, transparent 100%);
+  clip-path: polygon(10% 100%, 10% 40%, 20% 40%, 20% 20%, 30% 20%, 30% 40%, 40% 40%, 40% 10%, 50% 10%, 50% 40%, 60% 40%, 60% 30%, 70% 30%, 70% 40%, 80% 40%, 80% 50%, 90% 50%, 90% 100%);
+}
+
+.sgai-testimonials__bg-arch--2 {
+  left: 8%;
+  width: 140px;
+  height: 200px;
+  background: linear-gradient(to top, #4A4A4A 0%, transparent 100%);
+  clip-path: polygon(5% 100%, 5% 50%, 15% 50%, 15% 25%, 25% 25%, 25% 50%, 35% 50%, 35% 35%, 50% 35%, 50% 50%, 65% 50%, 65% 40%, 75% 40%, 75% 50%, 85% 50%, 85% 60%, 95% 60%, 95% 100%);
+}
+
+/* Subtle grid pattern */
+.sgai-testimonials__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ---- Container ---- */
+.sgai-testimonials__container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.sgai-testimonials__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sgai-testimonials__label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00D4FF;
+  background-color: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 50px;
+  padding: 6px 18px;
+  margin-bottom: 18px;
+}
+
+.sgai-testimonials__title {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.sgai-testimonials__subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #6E6E6E;
+  max-width: 540px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+.sgai-testimonials__divider {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, #00D4FF, #19D7EA);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ---- Grid ---- */
+.sgai-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+/* ---- Card ---- */
+.sgai-testimonials__card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.sgai-testimonials__card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.08),
+    0 16px 40px rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.sgai-testimonials__card--featured {
+  background: linear-gradient(145deg, #ffffff 0%, #f0fbfd 100%);
+  border: 1.5px solid rgba(0, 212, 255, 0.35);
+  box-shadow:
+    0 4px 16px rgba(0, 212, 255, 0.1),
+    0 12px 40px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.sgai-testimonials__card--featured:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 8px 28px rgba(0, 212, 255, 0.18),
+    0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.sgai-testimonials__card-inner {
+  padding: 30px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* ---- Featured badge ---- */
+.sgai-testimonials__featured-badge {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: linear-gradient(90deg, #00D4FF, #19D7EA);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.4);
+}
+
+/* ---- Quote icon ---- */
+.sgai-testimonials__quote-icon {
+  color: #00D4FF;
+  opacity: 0.5;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.sgai-testimonials__card--featured .sgai-testimonials__quote-icon {
+  opacity: 0.7;
+}
+
+/* ---- Quote text ---- */
+.sgai-testimonials__quote {
+  flex: 1;
+  margin: 0 0 24px;
+}
+
+.sgai-testimonials__quote p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #4A4A4A;
+  margin: 0;
+  border-right: 3px solid rgba(0, 212, 255, 0.4);
+  padding-right: 14px;
+}
+
+.sgai-testimonials__card--featured .sgai-testimonials__quote p {
+  border-right-color: #00D4FF;
+  color: #3A3A3A;
+}
+
+/* ---- Card footer ---- */
+.sgai-testimonials__card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 18px;
+}
+
+/* ---- Avatar ---- */
+.sgai-testimonials__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b2edf5, #00D4FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sgai-testimonials__avatar span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.sgai-testimonials__avatar--b {
+  background: linear-gradient(135deg, #a8d8ea, #0099bb);
+}
+
+.sgai-testimonials__avatar--c {
+  background: linear-gradient(135deg, #00D4FF, #0088aa);
+}
+
+.sgai-testimonials__avatar--d {
+  background: linear-gradient(135deg, #c5eef5, #00b8d4);
+}
+
+.sgai-testimonials__avatar--e {
+  background: linear-gradient(135deg, #7dd6e8, #0099cc);
+}
+
+.sgai-testimonials__avatar--f {
+  background: linear-gradient(135deg, #9de8f5, #007799);
+}
+
+/* ---- Author info ---- */
+.sgai-testimonials__author-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sgai-testimonials__author-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2C2C2C;
+  font-style: normal;
+  margin-bottom: 2px;
+}
+
+.sgai-testimonials__author-location {
+  display: block;
+  font-size: 12px;
+  color: #8C8C8C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Stars ---- */
+.sgai-testimonials__stars {
+  color: #F5A623;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-right: auto;
+}
+
+/* ---- Stats bar ---- */
+.sgai-testimonials__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 32px 40px;
+  flex-wrap: wrap;
+}
+
+.sgai-testimonials__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.sgai-testimonials__stat-number {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #00D4FF;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.sgai-testimonials__stat-label {
+  font-size: 13px;
+  color: #6E6E6E;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sgai-testimonials__stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (max 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .sgai-testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sgai-testimonials__card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .sgai-testimonials__stat {
+    padding: 0 24px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .sgai-testimonials {
+    padding: 70px 16px 60px;
+  }
+
+  .sgai-testimonials__header {
+    margin-bottom: 40px;
+  }
+
+  .sgai-testimonials__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sgai-testimonials__card:nth-child(3) {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .sgai-testimonials__card-inner {
+    padding: 24px 20px 20px;
+  }
+
+  .sgai-testimonials__stats {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .sgai-testimonials__stat {
+    padding: 8px 16px;
+    min-width: 120px;
+  }
+
+  .sgai-testimonials__stat-divider {
+    display: none;
+  }
+
+  .sgai-testimonials__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .sgai-testimonials__stat {
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    padding: 20px 10px;
+  }
+
+  .sgai-testimonials__stat:nth-child(odd):not(:last-child) {
+    border-left: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .sgai-testimonials__bg-shape--1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .sgai-testimonials__bg-shape--2 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (max 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .sgai-testimonials__title {
+    font-size: 1.7rem;
+  }
+
+  .sgai-testimonials__quote p {
+    font-size: 14px;
+  }
+
+  .sgai-testimonials__author-location {
+    font-size: 11px;
+  }
+
+  .sgai-testimonials__stat-number {
+    font-size: 1.6rem;
+  }
+}
+
+/* ============================================================
+   FOCUS / ACCESSIBILITY
+   ============================================================ */
+.sgai-testimonials__card:focus-within {
+  outline: 2px solid #00D4FF;
+  outline-offset: 3px;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
