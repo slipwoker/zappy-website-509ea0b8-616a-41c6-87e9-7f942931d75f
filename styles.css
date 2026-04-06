@@ -7168,6 +7168,404 @@ nav.navbar .sub-menu li a:hover { color: #284f69 !important; background-color: r
   }
 }
 
+/* Added Component Styles */
+/* ===========================
+   Hero Urban Renewal Section
+   =========================== */
+
+.hero-urban-renewal {
+  background-color: var(--background-color, #FBFAFA);
+  font-family: Heebo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  direction: rtl;
+  padding: 80px 24px 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture */
+.hero-urban-renewal::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-urban-renewal::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Container */
+.hero-urban-renewal__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Content (Right/Text side) ===== */
+.hero-urban-renewal__content {
+  flex: 1 1 55%;
+  text-align: right;
+}
+
+/* Badge */
+.hero-urban-renewal__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 50px;
+  padding: 6px 16px 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #007a90;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+
+.hero-urban-renewal__badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-color, #00D4FF);
+  display: inline-block;
+  flex-shrink: 0;
+  animation: hero-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes hero-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+
+/* Headline */
+.hero-urban-renewal__headline {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a2e;
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+}
+
+.hero-urban-renewal__headline-accent {
+  color: var(--accent-color, #00D4FF);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-urban-renewal__headline-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.35), transparent);
+  border-radius: 2px;
+}
+
+/* Subheadline */
+.hero-urban-renewal__subheadline {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--text-secondary-color, #8C8C8C);
+  margin: 0 0 36px;
+  max-width: 520px;
+}
+
+/* CTA Button */
+.hero-urban-renewal__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Heebo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  padding: 15px 34px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(26, 26, 46, 0.18), 0 1px 4px rgba(0,0,0,0.08);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.hero-urban-renewal__cta:hover,
+.hero-urban-renewal__cta:focus-visible {
+  background-color: #0d0d1f;
+  box-shadow: 0 8px 32px rgba(26, 26, 46, 0.26), 0 2px 6px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.hero-urban-renewal__cta:focus-visible {
+  outline: 3px solid var(--accent-color, #00D4FF);
+  outline-offset: 3px;
+}
+
+.hero-urban-renewal__cta-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.hero-urban-renewal__cta:hover .hero-urban-renewal__cta-arrow {
+  transform: translateX(-4px);
+}
+
+/* Divider */
+.hero-urban-renewal__divider {
+  width: 100%;
+  max-width: 520px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.2), rgba(0, 212, 255, 0.05) 50%, transparent);
+  margin: 36px 0;
+  border: none;
+}
+
+/* Value Items Row */
+.hero-urban-renewal__values {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 0;
+}
+
+.hero-urban-renewal__value-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.hero-urban-renewal__value-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007a90;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.hero-urban-renewal__value-item:hover .hero-urban-renewal__value-icon {
+  background-color: rgba(0, 212, 255, 0.15);
+}
+
+.hero-urban-renewal__value-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-color, #4A4A4A);
+  white-space: nowrap;
+}
+
+.hero-urban-renewal__value-sep {
+  width: 1px;
+  height: 28px;
+  background-color: rgba(74, 74, 74, 0.15);
+  margin: 0 18px;
+  flex-shrink: 0;
+}
+
+/* ===== Visual (Left/Image side) ===== */
+.hero-urban-renewal__visual {
+  flex: 1 1 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-urban-renewal__image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+}
+
+.hero-urban-renewal__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-urban-renewal__image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.14), 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Floating accent card */
+.hero-urban-renewal__float-card {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  min-width: 190px;
+  animation: hero-float 4s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.hero-urban-renewal__float-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.05));
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007a90;
+  flex-shrink: 0;
+}
+
+.hero-urban-renewal__float-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
+}
+
+.hero-urban-renewal__float-text strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  display: block;
+}
+
+.hero-urban-renewal__float-text span {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-secondary-color, #8C8C8C);
+  display: block;
+}
+
+/* ===========================
+   Responsive: Tablet
+   =========================== */
+@media (max-width: 900px) {
+  .hero-urban-renewal {
+    padding: 64px 20px 76px;
+  }
+
+  .hero-urban-renewal__container {
+    gap: 40px;
+  }
+
+  .hero-urban-renewal__subheadline {
+    max-width: 100%;
+  }
+
+  .hero-urban-renewal__divider {
+    max-width: 100%;
+  }
+
+  .hero-urban-renewal__value-sep {
+    margin: 0 12px;
+  }
+}
+
+/* ===========================
+   Responsive: Mobile
+   =========================== */
+@media (max-width: 680px) {
+  .hero-urban-renewal {
+    padding: 52px 18px 64px;
+  }
+
+  .hero-urban-renewal__container {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .hero-urban-renewal__content {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .hero-urban-renewal__visual {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .hero-urban-renewal__image-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-urban-renewal__float-card {
+    right: 12px;
+    bottom: -16px;
+    min-width: 170px;
+    padding: 11px 14px;
+  }
+
+  .hero-urban-renewal__values {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .hero-urban-renewal__value-sep {
+    display: none;
+  }
+
+  .hero-urban-renewal__cta {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.05rem;
+    padding: 16px 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-urban-renewal__headline {
+    font-size: 2rem;
+  }
+
+  .hero-urban-renewal__float-card {
+    display: none;
+  }
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
