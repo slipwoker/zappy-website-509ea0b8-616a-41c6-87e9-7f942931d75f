@@ -2735,487 +2735,438 @@
     </div>
 
   </div><!-- /.sgai-testimonials__container -->
-</section><section dir="rtl" style="position: relative; width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; background: var(--bg-dark); font-family: var(--font-heading); background-color: #FBFAFA; --zappy-bg-color: #FBFAFA" data-zappy-section="true" class="section" id="ai-section-1775461698563-3f3rpvi-dup-1775482406919" data-zappy-bg-type="color" data-zappy-bg-color="#FBFAFA" data-zappy-bg-image="" data-zappy-bg-overlay-color="#000000" data-zappy-bg-overlay-opacity="30" data-zappy-bg-video-type="" data-zappy-bg-video-url="">
+</section><section dir="rtl" style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-dark);position:relative;overflow:visible;padding:100px 0 120px;" data-zappy-section="true" class="section" id="ai-section-1775461698563-3f3rpvi-dup-1775482406919">
+
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap');
+
   .testimonials-section {
-    position: relative;
-    width: 100%;
-    padding: 0 0 80px;
-    overflow: hidden;
-    background: #070A0E;
+    font-family: Heebo, system-ui, sans-serif;
+    direction: rtl;
   }
 
-  /* Background image layer */
-  .testimonials-bg {
+  .tst-bg-grid {
     position: absolute;
     inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
     z-index: 0;
-    opacity: 0.12;
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(60%);
   }
 
-  /* Animated gradient overlay */
-  .testimonials-overlay {
+  .tst-glow-orb {
     position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(135deg, #070A0E 0%, rgba(0,212,255,0.08) 40%, #070A0E 80%);
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
   }
 
-  /* Diagonal accent bar */
-  .testimonials-accent-bar {
-    position: absolute;
-    top: 0;
-    left: -10%;
-    width: 120%;
-    height: 6px;
-    background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
-    z-index: 2;
-    opacity: 0.8;
+  .tst-glow-orb-1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(0,212,255,0.08);
+    top: -100px;
+    right: -150px;
   }
 
-  /* Header area */
-  .testimonials-header {
+  .tst-glow-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(111,99,255,0.07);
+    bottom: 0;
+    left: -100px;
+  }
+
+  .tst-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     position: relative;
     z-index: 10;
+  }
+
+  /* Header */
+  .tst-header {
     text-align: center;
-    padding: 80px 24px 60px;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 4rem;
   }
 
-  .testimonials-header .label-tag {
-    display: inline-block;
+  .tst-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     background: rgba(0,212,255,0.1);
-    border: 1px solid rgba(0,212,255,0.3);
+    border: 1px solid rgba(0,212,255,0.25);
+    border-radius: 100px;
+    padding: 8px 20px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
     color: var(--accent);
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    padding: 6px 18px;
-    border-radius: 50px;
-    margin-bottom: 24px;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 0.5px;
   }
 
-  .testimonials-header h2 {
-    font-size: clamp(2.2rem, 5vw, 3.6rem);
+  .tst-title {
+    font-family: Heebo, sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
     font-weight: 900;
     color: var(--text-light);
-    margin: 0 0 20px;
+    margin: 0 0 1rem;
     line-height: 1.15;
-    letter-spacing: -0.02em;
   }
 
-  .testimonials-header h2 span {
-    background: linear-gradient(90deg, var(--accent), #6F63FF);
+  .tst-title span {
+    background: linear-gradient(90deg, #00D4FF, #6F63FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .testimonials-header p {
+  .tst-subtitle {
+    font-size: 1.05rem;
     color: var(--text-muted);
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    line-height: 1.7;
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.7;
   }
 
-  /* Stats bar */
-  .testimonials-stats {
-    position: relative;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    max-width: 800px;
-    margin: 0 auto 70px;
-    padding: 0 24px;
-    background: rgba(0,212,255,0.08);
-    border-radius: 16px;
-    border: 1px solid rgba(0,212,255,0.15);
+  /* Stats Strip */
+  .tst-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 3.5rem 0;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-xl);
     overflow: hidden;
   }
 
-  .stat-item {
-    padding: 28px 16px;
+  .tst-stat-item {
+    flex: 1;
+    padding: 2rem 1.5rem;
     text-align: center;
-    background: rgba(7,10,14,0.7);
-    transition: background 0.3s ease;
     position: relative;
+    transition: background 0.3s ease;
   }
 
-  .stat-item::after {
+  .tst-stat-item:not(:last-child)::after {
     content: '';
     position: absolute;
-    left: 0;
+    right: 0;
     top: 20%;
     height: 60%;
     width: 1px;
-    background: rgba(0,212,255,0.2);
+    background: var(--border-dark);
   }
 
-  .stat-item:first-child::after { display: none; }
-
-  .stat-item:hover {
-    background: rgba(0,212,255,0.06);
+  .tst-stat-item:hover {
+    background: rgba(0,212,255,0.05);
   }
 
-  .stat-number {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+  .tst-stat-num {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
     font-weight: 900;
     color: var(--accent);
-    line-height: 1;
-    margin-bottom: 6px;
     display: block;
+    line-height: 1;
+    margin-bottom: 0.4rem;
   }
 
-  .stat-label {
+  .tst-stat-label {
     font-size: 0.85rem;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 400;
   }
 
-  /* Cards container */
-  .testimonials-grid {
-    position: relative;
-    z-index: 10;
+  /* Cards Grid */
+  .tst-cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    align-items: start;
   }
 
-  /* Individual card */
-  .testimonial-card {
+  .tst-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-xl);
+    padding: 2rem 2rem 1.8rem;
     position: relative;
-    background: linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(0,212,255,0.03) 100%);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 20px;
-    padding: 36px 28px 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     overflow: hidden;
-    cursor: default;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
   }
 
-  .testimonial-card::before {
+  .tst-card::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent));
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
     opacity: 0;
     transition: opacity 0.35s ease;
   }
 
-  .testimonial-card:hover::before {
+  .tst-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0,212,255,0.3);
+    box-shadow: 0 20px 60px rgba(0,212,255,0.08);
+  }
+
+  .tst-card:hover::before {
     opacity: 1;
   }
 
-  .testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 24px 60px rgba(0,212,255,0.12), 0 8px 20px rgba(0,0,0,0.4);
+  /* Featured card spans full height */
+  .tst-card--featured {
+    grid-row: 1 / 3;
+    background: linear-gradient(145deg, rgba(0,212,255,0.07), rgba(111,99,255,0.06));
     border-color: rgba(0,212,255,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  /* Quote mark */
-  .quote-mark {
-    position: absolute;
-    top: 16px;
-    left: 20px;
-    font-size: 5rem;
-    color: var(--accent);
-    opacity: 0.07;
-    font-family: Georgia, serif;
+  .tst-card--featured::before {
+    opacity: 0.6;
+    background: linear-gradient(90deg, #00D4FF, #6F63FF);
+  }
+
+  /* Quote icon */
+  .tst-quote-icon {
+    font-size: 3.5rem;
     line-height: 1;
-    pointer-events: none;
-    transition: opacity 0.3s;
+    color: rgba(0,212,255,0.2);
+    margin-bottom: 1rem;
+    font-family: Georgia, serif;
+    display: block;
   }
 
-  .testimonial-card:hover .quote-mark {
-    opacity: 0.12;
+  .tst-card--featured .tst-quote-icon {
+    color: rgba(0,212,255,0.35);
+    font-size: 4.5rem;
   }
 
   /* Stars */
-  .stars {
+  .tst-stars {
     color: #FFD24A;
     font-size: 1rem;
     letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
+    margin-bottom: 1rem;
+    display: block;
   }
 
-  .star-icon {
-    display: inline-block;
-    animation: starPulse 2s ease-in-out infinite;
-  }
-  .star-icon:nth-child(2) { animation-delay: 0.1s; }
-  .star-icon:nth-child(3) { animation-delay: 0.2s; }
-  .star-icon:nth-child(4) { animation-delay: 0.3s; }
-  .star-icon:nth-child(5) { animation-delay: 0.4s; }
-
-  @keyframes starPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-  }
-
-  /* Testimonial text */
-  .testimonial-text {
+  /* Text */
+  .tst-review-text {
     color: rgba(242,244,248,0.85);
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 0.97rem;
+    line-height: 1.75;
+    margin: 0 0 1.5rem;
     flex: 1;
-    font-weight: 400;
   }
 
-  /* Author area */
-  .testimonial-author {
+  .tst-card--featured .tst-review-text {
+    font-size: 1.08rem;
+    color: rgba(242,244,248,0.9);
+  }
+
+  /* Reviewer Footer */
+  .tst-reviewer {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,0.07);
+    gap: 12px;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border-dark);
     margin-top: auto;
   }
 
-  .author-avatar {
+  .tst-reviewer-avatar {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent) 0%, #6F63FF 100%);
+    background: linear-gradient(135deg, var(--accent), #6F63FF);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
     flex-shrink: 0;
-    box-shadow: 0 0 14px rgba(0,212,255,0.3);
+    font-family: Heebo, sans-serif;
   }
 
-  .author-info {
+  .tst-card--featured .tst-reviewer-avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+  }
+
+  .tst-reviewer-info {
     flex: 1;
   }
 
-  .author-location {
-    font-size: 0.82rem;
-    color: var(--accent);
-    font-weight: 600;
-    letter-spacing: 0.02em;
+  .tst-reviewer-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    display: block;
     margin-bottom: 2px;
   }
 
-  .author-badge {
-    display: inline-block;
-    background: rgba(0,212,255,0.1);
-    border: 1px solid rgba(0,212,255,0.2);
+  .tst-reviewer-location {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .tst-recommended-badge {
+    background: rgba(0,212,255,0.12);
+    border: 1px solid rgba(0,212,255,0.25);
     color: var(--accent);
-    font-size: 0.7rem;
-    padding: 2px 10px;
-    border-radius: 20px;
+    font-size: 0.75rem;
     font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
   }
 
-  /* Floating particles */
-  .particle {
+  /* Floating accent label for featured */
+  .tst-featured-label {
     position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 2;
-    animation: floatParticle linear infinite;
-    opacity: 0;
-  }
-
-  @keyframes floatParticle {
-    0% { transform: translateY(100%) scale(0); opacity: 0; }
-    10% { opacity: 0.5; }
-    90% { opacity: 0.2; }
-    100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
-  }
-
-  /* Bottom glow line */
-  .bottom-glow {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    z-index: 2;
-    opacity: 0.4;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: linear-gradient(90deg, #00D4FF, #6F63FF);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
   }
 
   /* Responsive */
   @media (max-width: 900px) {
-    .testimonials-grid {
-      grid-template-columns: 1fr 1fr;
+    .tst-cards-grid {
+      grid-template-columns: 1fr;
     }
-    .testimonials-stats {
-      grid-template-columns: repeat(3, 1fr);
+    .tst-card--featured {
+      grid-row: auto;
+    }
+    .tst-stats {
+      flex-wrap: wrap;
+    }
+    .tst-stat-item {
+      flex: 1 0 30%;
     }
   }
 
   @media (max-width: 600px) {
-    .testimonials-grid {
-      grid-template-columns: 1fr;
+    .tst-title {
+      font-size: 2rem;
     }
-    .testimonials-stats {
-      grid-template-columns: repeat(3, 1fr);
-      padding: 0 12px;
+    .tst-card {
+      padding: 1.5rem;
     }
-    .stat-item {
-      padding: 20px 8px;
+    .tst-stat-item {
+      flex: 1 0 45%;
     }
-    .testimonials-header {
-      padding: 60px 16px 40px;
-    }
-    .testimonials-grid {
-      padding: 0 16px;
+    .tst-stat-item:nth-child(2)::after {
+      display: none;
     }
   }
-
-  /* Scroll-in animation */
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .testimonial-card {
-    animation: fadeSlideUp 0.6s ease both;
-  }
-  .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-  .testimonial-card:nth-child(2) { animation-delay: 0.25s; }
-  .testimonial-card:nth-child(3) { animation-delay: 0.4s; }
 </style>
 
-<!-- Background image -->
-<div class="testimonials-section">
-  <div class="testimonials-bg" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27300%27%3E%3Cdefs%3E%3ClinearGradient id=%27grad%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23FF0083;stop-opacity:1%27 /%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%23FF008320;stop-opacity:1%27 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27url(%23grad)%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-family=%27Arial, sans-serif%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27 dy=%27.3em%27 font-weight=%27500%27%3EClick%20to%20add%20image%3C/text%3E%3C/svg%3E'); background-size:cover;background-position:center;"></div>
-  <div class="testimonials-overlay"></div>
-  <div class="testimonials-accent-bar"></div>
+<div class="tst-bg-grid"></div>
+<div class="tst-glow-orb tst-glow-orb-1"></div>
+<div class="tst-glow-orb tst-glow-orb-2"></div>
 
-  <!-- Floating particles -->
-  <div class="particle" style="width:4px;height:4px;background:var(--accent);left:10%;animation-duration:12s;animation-delay:0s;"></div>
-  <div class="particle" style="width:3px;height:3px;background:#6F63FF;left:25%;animation-duration:15s;animation-delay:3s;"></div>
-  <div class="particle" style="width:5px;height:5px;background:var(--accent);left:55%;animation-duration:10s;animation-delay:6s;"></div>
-  <div class="particle" style="width:3px;height:3px;background:#FFD24A;left:75%;animation-duration:14s;animation-delay:2s;"></div>
-  <div class="particle" style="width:4px;height:4px;background:var(--accent);left:88%;animation-duration:11s;animation-delay:5s;"></div>
+<div class="tst-container testimonials-section">
 
   <!-- Header -->
-  <div class="testimonials-header">
-    <div class="label-tag">💬 חוות דעת</div>
-    <h2>מה אומרים עלינו <span>הדיירים</span></h2>
-    <p>מאות משפחות כבר עברו תהליך התחדשות עירונית בליווי שגיא - הנה מה שיש להן לספר</p>
+  <div class="tst-header">
+    <div class="tst-badge">
+      <span>💬</span>
+      <span>חוות דעת</span>
+    </div>
+    <h2 class="tst-title">מה אומרים עלינו <span>הדיירים</span></h2>
+    <p class="tst-subtitle">מאות משפחות כבר עברו תהליך התחדשות עירונית בליווי שגיא - הנה מה שיש להן לספר</p>
   </div>
 
-  <!-- Stats bar -->
-  <div class="testimonials-stats">
-    <div class="stat-item">
-      <span class="stat-number">500+</span>
-      <span class="stat-label">דיירים מרוצים</span>
+  <!-- Stats -->
+  <div class="tst-stats">
+    <div class="tst-stat-item">
+      <span class="tst-stat-num">500+</span>
+      <span class="tst-stat-label">דיירים מרוצים</span>
     </div>
-    <div class="stat-item">
-      <span class="stat-number">98%</span>
-      <span class="stat-label">שביעות רצון</span>
+    <div class="tst-stat-item">
+      <span class="tst-stat-num">98%</span>
+      <span class="tst-stat-label">שביעות רצון</span>
     </div>
-    <div class="stat-item">
-      <span class="stat-number">60+</span>
-      <span class="stat-label">פרויקטים הושלמו</span>
+    <div class="tst-stat-item">
+      <span class="tst-stat-num">60+</span>
+      <span class="tst-stat-label">פרויקטים הושלמו</span>
     </div>
   </div>
 
-  <!-- Testimonial cards -->
-  <div class="testimonials-grid">
+  <!-- Cards -->
+  <div class="tst-cards-grid">
 
-    <!-- Card 1 -->
-    <div class="testimonial-card">
-      <div class="quote-mark">"</div>
-      <div class="stars">
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
+    <!-- Featured Card (tall, left column) -->
+    <div class="tst-card tst-card--featured">
+      <div class="tst-featured-label">✦ מומלץ</div>
+      <div>
+        <span class="tst-quote-icon">"</span>
+        <span class="tst-stars">★★★★★</span>
+        <p class="tst-review-text">שגיא התחדשות עירונית שינו את חיינו. הגענו אליהם עם ספקות רבים לגבי תהליך ההתחדשות, אך הם פיזרו כל חשש בסבלנות ובמקצועיות. הפרויקט הושלם בזמן, הדירה גדולה ב-40% ואנחנו מרגישים בבית חדש לגמרי.</p>
       </div>
-      <p class="testimonial-text">
-        התהליך כולו היה שקוף ומקצועי מהרגע הראשון. שגיא ליוו אותנו צעד אחר צעד, ענו על כל שאלה בסבלנות ובמהירות. הדירה החדשה שלנו עלתה על כל ציפייה - מרווחת, מודרנית ובטוחה.
-      </p>
-      <div class="testimonial-author">
-        <div class="author-avatar">
-          <!-- Icon 0 preserved -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <div class="tst-reviewer">
+        <div class="tst-reviewer-avatar">ד</div>
+        <div class="tst-reviewer-info">
+          <span class="tst-reviewer-name">דייר מרוצה</span>
+          <span class="tst-reviewer-location">פתח תקווה, פינוי-בינוי</span>
         </div>
-        <div class="author-info">
-          <div class="author-location">תל אביב, פרויקט תמ"א 38</div>
-          <span class="author-badge">★★★★★</span>
-        </div>
+        <span class="tst-recommended-badge">מומלץ</span>
       </div>
     </div>
 
     <!-- Card 2 -->
-    <div class="testimonial-card">
-      <div class="quote-mark">"</div>
-      <div class="stars">
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-      </div>
-      <p class="testimonial-text">
-        לא האמנתי שהבניין הישן שלנו יהפוך לכזה פרויקט יפה. הצוות של שגיא הוכיח מקצועיות ברמה הגבוהה ביותר, תוך שמירה על האינטרסים של כל הדיירים. ממליץ בחום לכל מי שמחפש שינוי אמיתי.
-      </p>
-      <div class="testimonial-author">
-        <div class="author-avatar">
-          <!-- Icon 1 preserved -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-        </div>
-        <div class="author-info">
-          <div class="author-location">רמת גן, פינוי-בינוי</div>
-          <span class="author-badge">מומלץ</span>
+    <div class="tst-card">
+      <span class="tst-quote-icon">"</span>
+      <span class="tst-stars">★★★★★</span>
+      <p class="tst-review-text">התהליך כולו היה שקוף ומקצועי מהרגע הראשון. שגיא ליוו אותנו צעד אחר צעד, ענו על כל שאלה בסבלנות ובמהירות. הדירה החדשה שלנו עלתה על כל ציפייה - מרווחת, מודרנית ובטוחה.</p>
+      <div class="tst-reviewer">
+        <div class="tst-reviewer-avatar">מ</div>
+        <div class="tst-reviewer-info">
+          <span class="tst-reviewer-name">משפחה מרוצה</span>
+          <span class="tst-reviewer-location">תל אביב, פרויקט תמ"א 38</span>
         </div>
       </div>
     </div>
 
     <!-- Card 3 -->
-    <div class="testimonial-card">
-      <div class="quote-mark">"</div>
-      <div class="stars">
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-        <span class="star-icon">★</span>
-      </div>
-      <p class="testimonial-text">
-        שגיא התחדשות עירונית שינו את חיינו. הגענו אליהם עם ספקות רבים לגבי תהליך ההתחדשות, אך הם פיזרו כל חשש בסבלנות ובמקצועיות. הפרויקט הושלם בזמן, הדירה גדולה ב-40% ואנחנו מרגישים בבית חדש לגמרי.
-      </p>
-      <div class="testimonial-author">
-        <div class="author-avatar">
-          <!-- Icon 2 preserved -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-        </div>
-        <div class="author-info">
-          <div class="author-location">פתח תקווה, פינוי-בינוי</div>
-          <span class="author-badge">★★★★★</span>
+    <div class="tst-card">
+      <span class="tst-quote-icon">"</span>
+      <span class="tst-stars">★★★★★</span>
+      <p class="tst-review-text">לא האמנתי שהבניין הישן שלנו יהפוך לכזה פרויקט יפה. הצוות של שגיא הוכיח מקצועיות ברמה הגבוהה ביותר, תוך שמירה על האינטרסים של כל הדיירים. ממליץ בחום לכל מי שמחפש שינוי אמיתי.</p>
+      <div class="tst-reviewer">
+        <div class="tst-reviewer-avatar">ר</div>
+        <div class="tst-reviewer-info">
+          <span class="tst-reviewer-name">דייר מרוצה</span>
+          <span class="tst-reviewer-location">רמת גן, פינוי-בינוי</span>
         </div>
       </div>
     </div>
 
   </div>
-
-  <div class="bottom-glow"></div>
 </div>
+
 </section>
 
 <section class="home-timeline-section" data-layout-spec="Home-timeline" dir="rtl" data-zappy-section="true" id="zappy-section-1">
