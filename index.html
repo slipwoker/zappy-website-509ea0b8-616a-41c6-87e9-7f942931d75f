@@ -1470,6 +1470,8 @@
 }
 </style>
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .home-timeline-section {
@@ -1477,24 +1479,23 @@
   overflow: visible;
   background-color: #070A0E;
   background-image:
-    radial-gradient(circle at 18% 20%, rgba(0,194,211,0.08) 0%, rgba(0,194,211,0) 40%),
-    radial-gradient(circle at 80% 60%, rgba(111,99,255,0.07) 0%, rgba(111,99,255,0) 40%),
+    radial-gradient(circle at 18% 20%, rgba(0,194,211,0.10) 0%, rgba(0,194,211,0) 36%),
+    radial-gradient(circle at 82% 75%, rgba(111,99,255,0.08) 0%, rgba(111,99,255,0) 40%),
     linear-gradient(180deg, #0B1118 0%, #070A0E 100%);
   color: var(--text-light);
+  padding: 0 0 80px;
   direction: rtl;
-  padding: 100px 24px 80px;
+  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
-/* Angular top divider (from light section) */
+/* ── Top Angular Divider ── */
 .home-timeline-section .home-timeline-top-divider {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 70px;
+  height: 72px;
+  margin-bottom: 0;
   pointer-events: none;
-  z-index: 5;
-  transform: translateY(-69px);
+  z-index: 2;
 }
 .home-timeline-section .home-timeline-top-divider svg {
   display: block;
@@ -1502,318 +1503,302 @@
   height: 100%;
 }
 
-/* Dotted band fade */
-.home-timeline-section .home-timeline-dot-band {
+/* ── Dotted Band ── */
+.home-timeline-section .home-timeline-dotted-band {
   position: absolute;
-  top: 0;
+  top: 72px;
   left: 0;
   width: 100%;
   height: 80px;
-  background-image: radial-gradient(circle, rgba(0,194,211,0.18) 1px, transparent 1px);
-  background-size: 20px 20px;
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  background-image: radial-gradient(circle, rgba(0,212,255,0.18) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Container */
+/* ── Container ── */
 .home-timeline-section .home-timeline-container {
+  position: relative;
+  z-index: 3;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  padding: 48px 24px 0;
 }
 
-/* Header */
+/* ── Header ── */
 .home-timeline-section .home-timeline-header {
-  text-align: start;
-  margin-bottom: 64px;
   max-width: 640px;
+  margin-bottom: 64px;
+  text-align: start;
 }
 
 .home-timeline-section .home-timeline-label {
+  display: inline-block;
   font-family: 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(0, 194, 211, 0.85);
-  margin-bottom: 14px;
-  display: block;
+  color: rgba(0, 212, 255, 0.80);
+  border: 1px solid rgba(0, 212, 255, 0.22);
+  border-radius: 3px;
+  padding: 4px 10px;
+  margin-bottom: 18px;
 }
 
 .home-timeline-section .home-timeline-h2 {
-  font-family: 'Heebo', system-ui, -apple-system, sans-serif;
+  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 34px;
   font-weight: 900;
   letter-spacing: -0.01em;
   line-height: 1.15;
   color: #EAF2FF;
-  margin: 0 0 18px 0;
-  text-align: start;
+  margin: 0 0 16px;
 }
 
 .home-timeline-section .home-timeline-intro {
-  font-family: 'Assistant', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.75;
-  color: rgba(234, 242, 255, 0.72);
+  color: rgba(234,242,255,0.72);
   margin: 0;
-  text-align: start;
+  max-width: 560px;
 }
 
-/* Timeline track */
-.home-timeline-section .home-timeline-track {
+/* ── Track Wrapper ── */
+.home-timeline-section .home-timeline-track-wrapper {
   position: relative;
+}
+
+/* ── Horizontal connector line (desktop) ── */
+.home-timeline-section .home-timeline-line {
+  display: none;
+}
+
+/* ── Steps Grid ── */
+.home-timeline-section .home-timeline-steps {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0;
   direction: rtl;
+  position: relative;
 }
 
-/* Horizontal connector line */
-.home-timeline-section .home-timeline-line {
-  position: absolute;
-  top: 28px;
-  right: calc(100% / 12);
-  left: calc(100% / 12);
-  height: 1px;
-  background: linear-gradient(
-    to left,
-    rgba(0,194,211,0.5) 0%,
-    rgba(234,242,255,0.15) 50%,
-    rgba(0,194,211,0.5) 100%
-  );
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* Each step */
+/* ── Individual Step ── */
 .home-timeline-section .home-timeline-step {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 1;
-  padding: 0 8px;
+  padding: 0 6px;
 }
 
-/* Node wrapper */
+/* Horizontal line between nodes */
+.home-timeline-section .home-timeline-step::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: 50%;
+  left: -50%;
+  height: 1px;
+  background: linear-gradient(to left, rgba(0,212,255,0.25), rgba(55,65,81,0.6));
+  z-index: 0;
+}
+.home-timeline-section .home-timeline-step:last-child::before {
+  display: none;
+}
+.home-timeline-section .home-timeline-step:first-child::before {
+  right: 0;
+  left: -50%;
+}
+
+/* ── Node Wrapper ── */
 .home-timeline-section .home-timeline-node-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  position: relative;
+  z-index: 2;
   margin-bottom: 20px;
+  flex-shrink: 0;
 }
 
-/* Node circle */
+/* ── Node Circle ── */
 .home-timeline-section .home-timeline-node {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(11,17,24,0.90);
-  border: 1px solid rgba(0,194,211,0.38);
+  background: rgba(11,17,24,0.92);
+  border: 1px solid rgba(0,212,255,0.35);
   box-shadow: 0 0 0 1px rgba(0,194,211,0.38), 0 0 22px rgba(0,194,211,0.22);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 194, 211, 0.9);
-  flex-shrink: 0;
+  color: rgba(0, 212, 255, 0.90);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  position: relative;
-  z-index: 2;
 }
 
 .home-timeline-section .home-timeline-node:hover {
-  box-shadow: 0 0 0 1px rgba(0,194,211,0.7), 0 0 32px rgba(0,194,211,0.4);
-  border-color: rgba(0,194,211,0.7);
+  box-shadow: 0 0 0 2px rgba(0,194,211,0.60), 0 0 32px rgba(0,194,211,0.40);
+  border-color: rgba(0,212,255,0.70);
 }
 
-.home-timeline-section .home-timeline-node--final {
-  border-color: rgba(185,240,41,0.45);
+.home-timeline-section .home-timeline-node--last {
+  border-color: rgba(185,240,41,0.40);
   box-shadow: 0 0 0 1px rgba(185,240,41,0.30), 0 0 22px rgba(185,240,41,0.18);
-  color: rgba(185,240,41,0.9);
+  color: rgba(185,240,41,0.90);
 }
 
-.home-timeline-section .home-timeline-node--final:hover {
-  box-shadow: 0 0 0 1px rgba(185,240,41,0.65), 0 0 32px rgba(185,240,41,0.35);
+.home-timeline-section .home-timeline-node--last:hover {
+  box-shadow: 0 0 0 2px rgba(185,240,41,0.55), 0 0 32px rgba(185,240,41,0.30);
 }
 
 .home-timeline-section .home-timeline-node-icon {
-  width: 20px;
-  height: 20px;
   flex-shrink: 0;
 }
 
-/* Step number */
-.home-timeline-section .home-timeline-step-num {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  color: rgba(234,242,255,0.35);
-  line-height: 1;
-}
-
-/* Step card */
-.home-timeline-section .home-timeline-step-card {
+/* ── Step Card ── */
+.home-timeline-section .home-timeline-card {
   background: rgba(11,17,24,0.72);
   border-radius: 6px;
   border: 1px solid rgba(234,242,255,0.10);
   box-shadow: 0 14px 40px rgba(0,0,0,0.45);
   padding: 18px 16px;
+  text-align: start;
   width: 100%;
-  text-align: center;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.home-timeline-section .home-timeline-step-card:hover {
-  border-color: rgba(0,194,211,0.25);
+.home-timeline-section .home-timeline-card:hover {
+  border-color: rgba(0,212,255,0.22);
   box-shadow: 0 18px 50px rgba(0,0,0,0.55), 0 0 20px rgba(0,194,211,0.08);
 }
 
-.home-timeline-section .home-timeline-step-card--final {
-  border-color: rgba(185,240,41,0.15);
-}
-
-.home-timeline-section .home-timeline-step-card--final:hover {
-  border-color: rgba(185,240,41,0.30);
+.home-timeline-section .home-timeline-card--last:hover {
+  border-color: rgba(185,240,41,0.22);
   box-shadow: 0 18px 50px rgba(0,0,0,0.55), 0 0 20px rgba(185,240,41,0.08);
 }
 
+/* ── Step Number ── */
+.home-timeline-section .home-timeline-step-num {
+  display: block;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: rgba(0,212,255,0.55);
+  margin-bottom: 8px;
+}
+
+.home-timeline-section .home-timeline-card--last .home-timeline-step-num {
+  color: rgba(185,240,41,0.55);
+}
+
+/* ── Step Title ── */
 .home-timeline-section .home-timeline-step-title {
-  font-family: 'Heebo', system-ui, -apple-system, sans-serif;
+  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 15px;
   font-weight: 900;
-  line-height: 1.3;
+  line-height: 1.25;
   color: #EAF2FF;
-  margin: 0 0 10px 0;
-  text-align: center;
+  margin: 0 0 8px;
 }
 
+/* ── Step Description ── */
 .home-timeline-section .home-timeline-step-desc {
-  font-family: 'Assistant', system-ui, -apple-system, sans-serif;
   font-size: 13px;
   font-weight: 600;
-  line-height: 1.7;
+  line-height: 1.65;
   color: rgba(234,242,255,0.65);
   margin: 0;
-  text-align: center;
 }
 
-/* ─── MOBILE STYLES ─────────────────────────────────────── */
-@media (max-width: 900px) {
+/* ══════════════════════════════════════════
+   RESPONSIVE — TABLET (≤ 1024px)
+══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .home-timeline-section .home-timeline-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 12px;
+  }
+
+  .home-timeline-section .home-timeline-step::before {
+    display: none;
+  }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤ 768px)
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
   .home-timeline-section {
-    padding: 80px 20px 60px;
+    padding-bottom: 60px;
+  }
+
+  .home-timeline-section .home-timeline-container {
+    padding: 32px 16px 0;
   }
 
   .home-timeline-section .home-timeline-header {
     margin-bottom: 40px;
-    max-width: 100%;
   }
 
   .home-timeline-section .home-timeline-h2 {
     font-size: 26px;
   }
 
-  /* Stack vertically */
-  .home-timeline-section .home-timeline-track {
+  .home-timeline-section .home-timeline-steps {
     grid-template-columns: 1fr;
     gap: 0;
+    position: relative;
   }
 
-  /* Vertical line */
-  .home-timeline-section .home-timeline-line {
-    top: calc(100% / 12);
-    bottom: calc(100% / 12);
-    right: 27px;
-    left: auto;
+  /* Vertical line on mobile */
+  .home-timeline-section .home-timeline-steps::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    bottom: 22px;
+    right: 21px;
     width: 1px;
-    height: auto;
-    background: linear-gradient(
-      to bottom,
-      rgba(0,194,211,0.5) 0%,
-      rgba(234,242,255,0.15) 50%,
-      rgba(0,194,211,0.5) 100%
-    );
+    background: linear-gradient(to bottom, rgba(0,212,255,0.30) 0%, rgba(55,65,81,0.4) 100%);
+    z-index: 0;
   }
 
   .home-timeline-section .home-timeline-step {
     flex-direction: row;
     align-items: flex-start;
+    gap: 16px;
     padding: 0 0 28px 0;
-    gap: 18px;
+  }
+
+  .home-timeline-section .home-timeline-step::before {
+    display: none;
+  }
+
+  .home-timeline-section .home-timeline-step:last-child {
+    padding-bottom: 0;
   }
 
   .home-timeline-section .home-timeline-node-wrap {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
     margin-bottom: 0;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
   }
 
-  .home-timeline-section .home-timeline-node {
-    width: 54px;
-    height: 54px;
-  }
-
-  .home-timeline-section .home-timeline-step-card {
-    text-align: start;
+  .home-timeline-section .home-timeline-card {
     flex: 1;
+    min-width: 0;
   }
 
   .home-timeline-section .home-timeline-step-title {
-    text-align: start;
+    font-size: 16px;
   }
 
   .home-timeline-section .home-timeline-step-desc {
-    text-align: start;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-timeline-section {
-    padding: 80px 16px 48px;
-  }
-
-  .home-timeline-section .home-timeline-h2 {
-    font-size: 22px;
-  }
-
-  .home-timeline-section .home-timeline-node {
-    width: 46px;
-    height: 46px;
-  }
-
-  .home-timeline-section .home-timeline-line {
-    right: 22px;
-  }
-
-  .home-timeline-section .home-timeline-step-card {
-    padding: 14px 12px;
-  }
-
-  .home-timeline-section .home-timeline-step-title {
     font-size: 14px;
   }
-
-  .home-timeline-section .home-timeline-step-desc {
-    font-size: 13px;
-  }
 }
-/* ZAPPY_POSTGEN_GUARD_TOP_DIVIDER_REMOVAL:Home-timeline (home-timeline) — repositioned top divider to overlap previous section boundary */
-[data-layout-spec="Home-timeline"] .home-timeline-top-divider {
-  transform: translateY(-100%) !important;
-}
-[data-layout-spec="Home-timeline"].home-timeline-section,
-[data-layout-spec="Home-timeline"] .home-timeline-section {
-  padding-top: 60px !important;
-}
-
 </style>
     <link rel="stylesheet" href="/styles.css">
 
@@ -2359,114 +2344,119 @@
         </div>
       </article></div>
   </div>
-</section><section class="home-timeline-section" data-layout-spec="Home-timeline" dir="rtl" data-zappy-section="true" id="zappy-section-1" style="position: relative; overflow: hidden; background-color: #FBFAFA; --zappy-bg-color: #FBFAFA" data-zappy-bg-type="color" data-zappy-bg-color="#FBFAFA" data-zappy-bg-image="" data-zappy-bg-overlay-color="#000000" data-zappy-bg-overlay-opacity="30" data-zappy-bg-video-type="" data-zappy-bg-video-url="">
-  <!-- Angular SVG divider from light section above -->
+</section><section class="home-timeline-section" data-layout-spec="Home-timeline" dir="rtl" data-zappy-section="true" id="zappy-section-1">
+  <!-- Angular divider top (from light stats section) -->
   <div class="home-timeline-top-divider" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0,0 1440,0 1440,70 0,0" fill="#0B1118"></polygon>
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,0 1440,0 1440,72 0,0" fill="#0B1118"></polygon>
     </svg>
   </div>
 
-  <!-- Dotted band fade overlay -->
-  <div class="home-timeline-dot-band" aria-hidden="true"></div>
+  <!-- Dotted band overlay -->
+  <div class="home-timeline-dotted-band" aria-hidden="true"></div>
 
   <div class="home-timeline-container">
+
     <!-- Section Header -->
     <div class="home-timeline-header">
-      <div class="home-timeline-label">תהליך עבודה</div>
+      <span class="home-timeline-label">תהליך עבודה</span>
       <h2 class="home-timeline-h2">איך התהליך עובד</h2>
       <p class="home-timeline-intro">תהליך מסודר, מתועד ושקוף עם סף הסכמה ברור, תיאום מול אנשי מקצוע, מעקב וליווי אחר כל אבן דרך מהארגון הראשוני ועד קבלת המפתח</p>
     </div>
 
-    <!-- Desktop Timeline -->
-    <div class="home-timeline-track" role="list">
-      <!-- Connector Line -->
+    <!-- Desktop Horizontal Timeline -->
+    <div class="home-timeline-track-wrapper">
       <div class="home-timeline-line" aria-hidden="true"></div>
 
-      <!-- Step 1 -->
-      <article class="home-timeline-step" role="listitem">
-        <div class="home-timeline-node-wrap">
-          <div class="home-timeline-node">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0121 9.414V19a2 2 0 01-2 2z"></path></svg>
-          </div>
-          <span class="home-timeline-step-num">01</span>
-        </div>
-        <div class="home-timeline-step-card">
-          <h3 class="home-timeline-step-title">בדיקת זכאות ראשונית</h3>
-          <p class="home-timeline-step-desc">פגישת היכרות ראשונה, איסוף מסמכים בסיסיים ובדיקה מקדימה של התאמת הנכס להתחדשות עירונית,  תוך 48 שעות תקבלו תשובה ברורה.</p>
-        </div>
-      </article>
+      <div class="home-timeline-steps">
 
-      <!-- Step 2 -->
-      <article class="home-timeline-step" role="listitem">
-        <div class="home-timeline-node-wrap">
-          <div class="home-timeline-node">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <!-- Step 1 -->
+        <div class="home-timeline-step">
+          <div class="home-timeline-node-wrap">
+            <div class="home-timeline-node">
+              <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"></path><rect x="9" y="3" width="6" height="4" rx="1"></rect><path d="M9 12h6M9 16h4"></path></svg>
+            </div>
           </div>
-          <span class="home-timeline-step-num">02</span>
+          <div class="home-timeline-card card-step-card">
+            <span class="home-timeline-step-num">01</span>
+            <h3 class="home-timeline-step-title">בדיקת זכאות ראשונית</h3>
+            <p class="home-timeline-step-desc">פגישת היכרות ראשונה, איסוף מסמכים בסיסיים ובדיקה מקדימה של התאמת הנכס להתחדשות עירונית,  תוך 48 שעות תקבלו תשובה ברורה.</p>
+          </div>
         </div>
-        <div class="home-timeline-step-card">
-          <h3 class="home-timeline-step-title">הקמת נציגות</h3>
-          <p class="home-timeline-step-desc">ארגון פגישות דיירים, הצבעות, הקמת נציגות. אנחנו מלווים אתכם בכל שלב ומבטיחים שכל הדיירים מיוצגים.</p>
-        </div>
-      </article>
 
-      <!-- Step 3 -->
-      <article class="home-timeline-step" role="listitem">
-        <div class="home-timeline-node-wrap">
-          <div class="home-timeline-node">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+        <!-- Step 2 -->
+        <div class="home-timeline-step">
+          <div class="home-timeline-node-wrap">
+            <div class="home-timeline-node">
+              <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="8" r="3"></circle><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"></path><path d="M17 8a3 3 0 110-6"></path><path d="M21 14v-1a3 3 0 00-3-3"></path></svg>
+            </div>
           </div>
-          <span class="home-timeline-step-num">03</span>
+          <div class="home-timeline-card card-step-card">
+            <span class="home-timeline-step-num">02</span>
+            <h3 class="home-timeline-step-title">הקמת נציגות</h3>
+            <p class="home-timeline-step-desc">ארגון פגישות דיירים, הצבעות, הקמת נציגות. אנחנו מלווים אתכם בכל שלב ומבטיחים שכל הדיירים מיוצגים.</p>
+          </div>
         </div>
-        <div class="home-timeline-step-card">
-          <h3 class="home-timeline-step-title">תכנון ובחירת שותפים</h3>
-          <p class="home-timeline-step-desc">ניתוח הצעות יזמים, השוואת תנאים, בחירת אדריכל ויועצים. אנחנו מנתחים כל פרט ומציגים לכם את האפשרויות הטובות ביותר בשקיפות מלאה.</p>
-        </div>
-      </article>
 
-      <!-- Step 4 -->
-      <article class="home-timeline-step" role="listitem">
-        <div class="home-timeline-node-wrap">
-          <div class="home-timeline-node">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <!-- Step 3 -->
+        <div class="home-timeline-step">
+          <div class="home-timeline-node-wrap">
+            <div class="home-timeline-node">
+              <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"></rect><rect x="13" y="3" width="8" height="8" rx="1"></rect><rect x="3" y="13" width="8" height="8" rx="1"></rect><path d="M13 17h8M17 13v8"></path></svg>
+            </div>
           </div>
-          <span class="home-timeline-step-num">04</span>
+          <div class="home-timeline-card card-step-card">
+            <span class="home-timeline-step-num">03</span>
+            <h3 class="home-timeline-step-title">תכנון ובחירת שותפים</h3>
+            <p class="home-timeline-step-desc">ניתוח הצעות יזמים, השוואת תנאים, בחירת אדריכל ויועצים. אנחנו מנתחים כל פרט ומציגים לכם את האפשרויות הטובות ביותר בשקיפות מלאה.</p>
+          </div>
         </div>
-        <div class="home-timeline-step-card">
-          <h3 class="home-timeline-step-title">מסגרת משפטית והסכמים</h3>
-          <p class="home-timeline-step-desc">עריכת הסכמי שיתוף, הסכם פינוי והסכם זכויות. כל מסמך נבדק על ידי עורכי דין מומחים ומוסבר לכם בשפה ברורה לפני החתימה.</p>
-        </div>
-      </article>
 
-      <!-- Step 5 -->
-      <article class="home-timeline-step" role="listitem">
-        <div class="home-timeline-node-wrap">
-          <div class="home-timeline-node">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+        <!-- Step 4 -->
+        <div class="home-timeline-step">
+          <div class="home-timeline-node-wrap">
+            <div class="home-timeline-node">
+              <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
           </div>
-          <span class="home-timeline-step-num">05</span>
+          <div class="home-timeline-card card-step-card">
+            <span class="home-timeline-step-num">04</span>
+            <h3 class="home-timeline-step-title">מסגרת משפטית והסכמים</h3>
+            <p class="home-timeline-step-desc">עריכת הסכמי שיתוף, הסכם פינוי והסכם זכויות. כל מסמך נבדק על ידי עורכי דין מומחים ומוסבר לכם בשפה ברורה לפני החתימה.</p>
+          </div>
         </div>
-        <div class="home-timeline-step-card">
-          <h3 class="home-timeline-step-title">היתרים ופיקוח ביצוע</h3>
-          <p class="home-timeline-step-desc">הגשת תוכניות, קבלת היתרי בנייה, פיקוח שוטף על הקבלנים ואישור שלבי תשלום. אנחנו נוכחים בשטח ומוודאים שהכל מתנהל לפי התוכנית.</p>
-        </div>
-      </article>
 
-      <!-- Step 6 -->
-      <article class="home-timeline-step home-timeline-step--last" role="listitem">
-        <div class="home-timeline-node-wrap">
-          <div class="home-timeline-node home-timeline-node--final">
-            <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+        <!-- Step 5 -->
+        <div class="home-timeline-step">
+          <div class="home-timeline-node-wrap">
+            <div class="home-timeline-node">
+              <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline><path d="M9 7h.01M15 7h.01"></path></svg>
+            </div>
           </div>
-          <span class="home-timeline-step-num">06</span>
+          <div class="home-timeline-card card-step-card">
+            <span class="home-timeline-step-num">05</span>
+            <h3 class="home-timeline-step-title">היתרים ופיקוח ביצוע</h3>
+            <p class="home-timeline-step-desc">הגשת תוכניות, קבלת היתרי בנייה, פיקוח שוטף על הקבלנים ואישור שלבי תשלום. אנחנו נוכחים בשטח ומוודאים שהכל מתנהל לפי התוכנית.</p>
+          </div>
         </div>
-        <div class="home-timeline-step-card home-timeline-step-card--final">
-          <h3 class="home-timeline-step-title">מסירה ותיעוד סיום</h3>
-          <p class="home-timeline-step-desc">בדיקות קבלה, רישום טאבו, מסירת מפתחות ותיק סגירה מלא. אתם מקבלים תיעוד מסודר של כל התהליך - כל מסמך, כל אישור, כל פרוטוקול.</p>
+
+        <!-- Step 6 -->
+        <div class="home-timeline-step">
+          <div class="home-timeline-node-wrap">
+            <div class="home-timeline-node home-timeline-node--last">
+              <svg data-element-type="icon" data-icon-type="svg" class="home-timeline-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+          </div>
+          <div class="home-timeline-card card-step-card home-timeline-card--last">
+            <span class="home-timeline-step-num">06</span>
+            <h3 class="home-timeline-step-title">מסירה ותיעוד סיום</h3>
+            <p class="home-timeline-step-desc">בדיקות קבלה, רישום טאבו, מסירת מפתחות ותיק סגירה מלא. אתם מקבלים תיעוד מסודר של כל התהליך - כל מסמך, כל אישור, כל פרוטוקול.</p>
+          </div>
         </div>
-      </article>
+
+      </div>
     </div>
+
   </div>
 </section><section class="home-cta-section" data-layout-spec="Home-cta" id="zappy-section-3">
   <div class="home-cta-section__gradient-transition" aria-hidden="true"></div>
