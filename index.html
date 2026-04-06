@@ -1801,24 +1801,29 @@
 }
 </style>
 
-
-
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .home-cta-section {
   position: relative;
-  overflow: visible;
   background-color: #070A0E;
   background-image:
-    radial-gradient(ellipse 60% 40% at 50% 110%, rgba(185,240,41,0.10) 0%, rgba(185,240,41,0) 70%),
-    linear-gradient(180deg, #ffffff 0%, #f0f0f0 8%, #1a1a1a 22%, #0d1117 55%, #070A0E 100%);
+    radial-gradient(ellipse 70% 40% at 50% 110%, rgba(185,240,41,0.08) 0%, transparent 60%),
+    linear-gradient(180deg, #070A0E 0%, #070A0E 100%);
   color: var(--text-light);
-  padding: 160px 16px 100px;
+  overflow: visible;
+  padding: 0 0 100px;
   direction: rtl;
 }
 
 .home-cta-gradient-fade {
-  display: none;
+  position: absolute;
+  top: -170px;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  background: linear-gradient(180deg, transparent 0%, rgba(7,10,14,0.55) 45%, #070A0E 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .home-cta-grid-texture {
@@ -1830,126 +1835,97 @@
     linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
   background-size: 48px 48px;
-  mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 80%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 70%, transparent 100%);
 }
 
 .home-cta-glow {
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%;
-  height: 220px;
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(185,240,41,0.10) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(ellipse 70% 100% at 50% 100%, rgba(185,240,41,0.13) 0%, rgba(185,240,41,0) 70%);
 }
 
 .home-cta-container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 80px 48px 0;
   display: flex;
   justify-content: center;
 }
 
-.home-cta-inner {
+.home-cta-content {
   width: 100%;
-  max-width: 720px;
+  max-width: 760px;
   text-align: start;
 }
 
-.home-cta-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(185,240,41,0.08);
-  border: 1px solid rgba(185,240,41,0.25);
-  border-radius: 999px;
-  padding: 6px 14px;
-  margin-bottom: 28px;
-  font-family: 'Assistant', system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #B9F029;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.home-cta-badge-dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #B9F029;
-  box-shadow: 0 0 8px rgba(185,240,41,0.8);
-  flex-shrink: 0;
-}
-
-.home-cta-heading {
-  font-family: 'Heebo', system-ui, sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0 0 20px;
-  letter-spacing: -0.02em;
-}
-
-.home-cta-paragraph {
-  font-family: 'Assistant', system-ui, sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: rgba(234,242,255,0.72);
-  margin: 0 0 36px;
-  max-width: 540px;
-}
-
-.home-cta-features {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 12px 28px;
-  margin-bottom: 44px;
-}
-
-.home-cta-feature-item {
+.home-cta-status-line {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  font-family: 'Assistant', system-ui, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(234,242,255,0.82);
+  margin-bottom: 28px;
 }
 
-.home-cta-feature-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: rgba(185,240,41,0.10);
-  border: 1px solid rgba(185,240,41,0.22);
-  color: #B9F029;
+.home-cta-status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B9F029;
+  box-shadow: 0 0 8px rgba(185,240,41,0.7);
   flex-shrink: 0;
+}
+
+.home-cta-status-text {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: rgba(234,242,255,0.45);
+  text-transform: uppercase;
+}
+
+.home-cta-heading {
+  font-family: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-light);
+  margin: 0 0 24px;
+  letter-spacing: -0.02em;
+}
+
+.home-cta-paragraph {
+  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(234,242,255,0.72);
+  margin: 0 0 40px;
+  max-width: 560px;
 }
 
 .home-cta-actions {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .home-cta-btn-primary {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #B9F029;
   color: #0B1118;
   padding: 14px 32px;
@@ -1960,19 +1936,23 @@
   font-size: 15px;
   line-height: 1;
   text-decoration: none;
-  box-shadow: 0 0 24px rgba(185,240,41,0.35), 0 10px 24px rgba(0,0,0,0.35);
-  transition: box-shadow 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 0 24px rgba(185,240,41,0.30), 0 10px 24px rgba(0,0,0,0.35);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  cursor: pointer;
   white-space: nowrap;
 }
 
 .home-cta-btn-primary:hover {
-  box-shadow: 0 0 40px rgba(185,240,41,0.55), 0 14px 32px rgba(0,0,0,0.45);
+  background: #c8f53a;
+  box-shadow: 0 0 40px rgba(185,240,41,0.50), 0 14px 32px rgba(0,0,0,0.40);
   transform: translateY(-2px);
   color: #0B1118;
 }
 
-.home-cta-btn-secondary {
-  display: inline-block;
+.home-cta-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: rgba(234,242,255,0.86);
   padding: 13px 28px;
@@ -1983,77 +1963,93 @@
   font-size: 15px;
   line-height: 1;
   text-decoration: none;
-  transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
   white-space: nowrap;
 }
 
-.home-cta-btn-secondary:hover {
-  border-color: rgba(234,242,255,0.45);
+.home-cta-btn-outline:hover {
+  border-color: rgba(234,242,255,0.50);
   background: rgba(234,242,255,0.06);
-  color: var(--text-light);
   transform: translateY(-2px);
+  color: rgba(234,242,255,0.95);
 }
 
-.home-cta-ledger-line {
+.home-cta-divider-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(234,242,255,0.12) 20%, rgba(234,242,255,0.12) 80%, transparent 100%);
+  margin-bottom: 28px;
+}
+
+.home-cta-meta {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
-  padding-top: 28px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-.home-cta-ledger-id {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 11px;
-  font-weight: 400;
-  color: rgba(185,240,41,0.65);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.home-cta-meta-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Assistant', system-ui, sans-serif;
+  font-size: 13px;
+  color: rgba(234,242,255,0.40);
+  white-space: nowrap;
 }
 
-.home-cta-ledger-sep {
-  color: rgba(255,255,255,0.18);
-  font-size: 11px;
+.home-cta-meta-item i {
+  font-size: 13px;
+  color: rgba(185,240,41,0.55);
 }
 
-.home-cta-ledger-status {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 11px;
-  font-weight: 400;
-  color: rgba(234,242,255,0.35);
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
+.home-cta-meta-sep {
+  color: rgba(234,242,255,0.18);
+  font-size: 16px;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
   .home-cta-section {
-    padding: 120px 16px 80px;
-    background-image:
-      radial-gradient(ellipse 80% 40% at 50% 110%, rgba(185,240,41,0.10) 0%, rgba(185,240,41,0) 70%),
-      linear-gradient(180deg, #ffffff 0%, #f0f0f0 6%, #1a1a1a 18%, #0d1117 50%, #070A0E 100%);
+    padding: 0 0 72px;
+  }
+
+  .home-cta-container {
+    padding: 64px 20px 0;
   }
 
   .home-cta-heading {
     font-size: 2rem;
   }
 
-  .home-cta-features {
-    flex-direction: column;
-    gap: 10px;
+  .home-cta-paragraph {
+    max-width: 100%;
   }
 
   .home-cta-actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 12px;
   }
 
   .home-cta-btn-primary,
-  .home-cta-btn-secondary {
+  .home-cta-btn-outline {
     width: 100%;
     text-align: center;
-    padding: 14px 20px;
+    justify-content: center;
+  }
+
+  .home-cta-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .home-cta-meta-sep {
+    display: none;
   }
 
   .home-cta-glow {
@@ -2863,55 +2859,27 @@
     </div>
 
   </div>
-</section><section class="home-cta-section" data-layout-spec="Home-cta" dir="rtl" data-zappy-section="true" id="zappy-section-3">
+</section><section class="home-cta-section" data-layout-spec="Home-cta" dir="rtl" data-zappy-section="true" id="zappy-section-3" style="opacity: 1;">
   <div class="home-cta-gradient-fade" aria-hidden="true"></div>
   <div class="home-cta-grid-texture" aria-hidden="true"></div>
   <div class="home-cta-glow" aria-hidden="true"></div>
-
   <div class="home-cta-container">
-    <div class="home-cta-inner">
-
-      <div class="home-cta-badge">
-        <span class="home-cta-badge-dot"></span>
-        <span>שגיא התחדשות עירונית</span>
+    <div class="home-cta-content">
+      
+      <h2 class="home-cta-heading" style="text-align: center;">הזמן לקבל בהירות מלאה</h2>
+      <p class="home-cta-paragraph" style="text-align: center; outline: none;">שיחה ראשונה מובנית שתעניק לך תמונה ברורה של המצב, הזכויות והצעדים הבאים. בלי עמימות, רק מסלול פעולה ממוקד.</p>
+      <div class="home-cta-actions" style="text-align: center !important; display: flex !important; justify-content: center !important; align-items: flex-start !important; width: 100% !important;">
+        <a href="/contact-us" class="home-cta-btn-primary" data-element-type="button" data-element-id="btn-1775462489166-psknpc8w2" data-native-element="true" style="border-color: var(--primary-color, var(--primary, #8B0000)) !important; color: rgb(255, 255, 255) !important; background-color: var(--primary-color, var(--primary, #8B0000)) !important; background-image: none !important;">צרו קשר</a>
+        
       </div>
-
-      <h2 class="home-cta-heading">הזמן לקבל בהירות מלאה</h2>
-
-      <p class="home-cta-paragraph">שיחה ראשונה מובנית שתעניק לך תמונה ברורה של המצב, הזכויות והצעדים הבאים. בלי עמימות, רק מסלול פעולה ממוקד.</p>
-
-      <div class="home-cta-features">
-        <div class="home-cta-feature-item">
-          <div class="home-cta-feature-icon">
-            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"></path><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"></path></svg>
-          </div>
-          <span>ייעוץ ראשוני ללא עלות</span>
-        </div>
-        <div class="home-cta-feature-item">
-          <div class="home-cta-feature-icon">
-            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          </div>
-          <span>תיאום מהיר בתוך 24 שעות</span>
-        </div>
-        <div class="home-cta-feature-item">
-          <div class="home-cta-feature-icon">
-            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          </div>
-          <span>מסלול פעולה מתועד וברור</span>
-        </div>
+      <div class="home-cta-divider-line" aria-hidden="true"></div>
+      <div class="home-cta-meta">
+        <span class="home-cta-meta-item" ><i class="fa-regular fa-clock" style="cursor: pointer;"></i> שיחה ראשונה ללא עלות</span>
+        <span class="home-cta-meta-sep" aria-hidden="true">·</span>
+        <span class="home-cta-meta-item"><i class="fa-regular fa-shield-check"></i> ליווי מקצועי מלא</span>
+        <span class="home-cta-meta-sep" aria-hidden="true">·</span>
+        <span class="home-cta-meta-item" ><i class="fa-regular fa-file-lines" style="cursor: pointer;"></i> תיעוד שקוף בכל שלב</span>
       </div>
-
-      <div class="home-cta-actions">
-        <a href="/contact-us" class="home-cta-btn-primary">צרו קשר</a>
-        <a href="/documents" class="home-cta-btn-secondary">בדיקת מוכנות מסמכים</a>
-      </div>
-
-      <div class="home-cta-ledger-line">
-        <span class="home-cta-ledger-id">PROJECT.INIT</span>
-        <span class="home-cta-ledger-sep">—</span>
-        <span class="home-cta-ledger-status">READY TO START</span>
-      </div>
-
     </div>
   </div>
 </section></main>
