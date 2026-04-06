@@ -7566,6 +7566,337 @@ nav.navbar .sub-menu li a:hover { color: #284f69 !important; background-color: r
   }
 }
 
+/* Added Component Styles */
+/* ===== TESTIMONIALS SECTION ===== */
+.tst-testimonials {
+  background: linear-gradient(160deg, #f0f8fb 0%, #e8f4f8 40%, #f5fafb 100%);
+  padding: 90px 20px 80px;
+  font-family: Heebo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  direction: rtl;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+.tst-testimonials::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tst-testimonials::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ===== CONTAINER ===== */
+.tst-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HEADER ===== */
+.tst-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.tst-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0 0 18px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.tst-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-secondary-color, #8C8C8C);
+  line-height: 1.8;
+  margin: 0 0 24px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tst-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color, #00D4FF), #19D7EA);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ===== CARDS GRID ===== */
+.tst-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+  align-items: start;
+}
+
+/* ===== TESTIMONIAL CARD ===== */
+.tst-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 16px;
+  padding: 32px 28px 24px;
+  box-shadow: 0 4px 20px rgba(0, 180, 220, 0.08), 0 1px 4px rgba(0,0,0,0.04);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tst-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 180, 220, 0.15), 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Featured card */
+.tst-card--featured {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 6px 28px rgba(0, 180, 220, 0.14), 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* ===== BADGE ===== */
+.tst-card-badge {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: linear-gradient(90deg, #00D4FF, #19D7EA);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 10px rgba(0, 212, 255, 0.35);
+}
+
+/* ===== QUOTE ICON ===== */
+.tst-quote-icon {
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--accent-color, #00D4FF);
+  font-family: Georgia, serif;
+  font-weight: 700;
+  opacity: 0.6;
+  height: 40px;
+  display: block;
+  margin-bottom: -10px;
+}
+
+/* ===== REVIEW TEXT ===== */
+.tst-review-text {
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: var(--text-color, #4A4A4A);
+  margin: 0;
+  flex-grow: 1;
+  quotes: none;
+}
+
+/* ===== CARD FOOTER ===== */
+.tst-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid rgba(0, 212, 255, 0.12);
+  padding-top: 18px;
+  margin-top: auto;
+}
+
+/* ===== STARS ===== */
+.tst-stars {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3px;
+}
+
+.tst-star {
+  color: #F5A623;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* ===== CUSTOMER INFO ===== */
+.tst-customer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tst-customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
+}
+
+.tst-customer-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.tst-customer-location {
+  font-size: 0.82rem;
+  color: var(--text-secondary-color, #8C8C8C);
+}
+
+/* ===== AVATARS ===== */
+.tst-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.tst-avatar--r {
+  background: linear-gradient(135deg, #00D4FF, #0099bb);
+}
+
+.tst-avatar--d {
+  background: linear-gradient(135deg, #19D7EA, #00a8c0);
+}
+
+.tst-avatar--m {
+  background: linear-gradient(135deg, #4db8d4, #007a99);
+}
+
+/* ===== STATS BAR ===== */
+.tst-stats-bar {
+  background: #ffffff;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  padding: 36px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  box-shadow: 0 4px 20px rgba(0, 180, 220, 0.08);
+}
+
+.tst-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  text-align: center;
+}
+
+.tst-stat-number {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--accent-color, #00D4FF);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.tst-stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary-color, #8C8C8C);
+  font-weight: 500;
+}
+
+.tst-stat-divider {
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE — TABLET ===== */
+@media (max-width: 900px) {
+  .tst-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tst-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .tst-stats-bar {
+    padding: 28px 24px;
+  }
+}
+
+/* ===== RESPONSIVE — MOBILE ===== */
+@media (max-width: 600px) {
+  .tst-testimonials {
+    padding: 60px 16px 56px;
+  }
+
+  .tst-header {
+    margin-bottom: 40px;
+  }
+
+  .tst-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tst-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .tst-card {
+    padding: 28px 22px 22px;
+  }
+
+  .tst-stats-bar {
+    flex-direction: column;
+    gap: 24px;
+    padding: 28px 20px;
+  }
+
+  .tst-stat-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+  }
+
+  .tst-stat-number {
+    font-size: 2.2rem;
+  }
+}
+
+/* ===== FOCUS ACCESSIBILITY ===== */
+.tst-card:focus-within {
+  outline: 2px solid var(--accent-color, #00D4FF);
+  outline-offset: 2px;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
