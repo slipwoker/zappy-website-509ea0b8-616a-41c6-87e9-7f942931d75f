@@ -31,24 +31,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/blog/how-project-starts</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://example.com/blog/before-signing</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://example.com/blog/evaluating-offer</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://example.com/blog/work-method</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>daily</changefreq>
