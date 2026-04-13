@@ -17,18 +17,6 @@ https://example.com/thank-you
 ### צרו קשר
 https://example.com/contact-us
 
-### מגזין ההתחדשות העירונית
-https://example.com/blog
-שגיא התחדשות עירונית - מגזין ההתחדשות העירונית
-
-### השיטה
-https://example.com/blog/work-method
-שגיא התחדשות עירונית - השיטה שלי: ליווי דיירים ב־5 שלבים עד הכניסה לדירה החדשה
-
-### זכויות דייר
-https://example.com/blog/tenant-rights
-שגיא התחדשות עירונית - הזכויות שלכם בפרויקט
-
 ## Legal & Policy
 
 ### Privacy Policy
