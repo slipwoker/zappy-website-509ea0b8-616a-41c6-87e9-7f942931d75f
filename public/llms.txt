@@ -29,6 +29,10 @@ https://example.com/blog/work-method
 https://example.com/blog/tenant-rights
 שגיא התחדשות עירונית - הזכויות שלכם בפרויקט
 
+### השירותים
+https://example.com/blog/our-services
+שגיא התחדשות עירונית - השירותים שלנו: ליווי דיירים מקצה לקצה
+
 ## Legal & Policy
 
 ### Privacy Policy
