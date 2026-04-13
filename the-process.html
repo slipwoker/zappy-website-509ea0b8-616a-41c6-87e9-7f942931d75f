@@ -711,6 +711,66 @@
               });
             })();
           </script>
+        <style>
+      /* Dropdown sub-menu styles (AI-generated page) */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="mobile-lang-menu-deployed-css">
@@ -775,7 +835,7 @@
       <a href="/" class="logo-link">
         <img src="/assets/logo-1774342678615-8ai99t.webp?v=1774342678885-wiuupu" alt="שגיא התחדשות עירונית" class="logo"  data-element-type="image" data-element-id="img-1770806812538-5guzi7c13" data-image-type="logo">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/the-process">התהליך</a></li><li style="display: none !important;" class="zappy-hidden-menu-item"><a href="/thank-you">Thank You | שגיא התחדשות עירונית</a></li><li class="nav-cta-item-mobile"><a href="/contact-us">צרו קשר</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/the-process">התהליך</a></li><li style="display: none !important;" class="zappy-hidden-menu-item"><a href="/thank-you">Thank You | שגיא התחדשות עירונית</a></li><li class="nav-cta-item-mobile"><a href="/contact-us">צרו קשר</a></li><li><a href="/blog" class="nav-link">בלוג</a><ul class="sub-menu"><li><a href="/blog/how-project-starts" class="nav-link">תחילת פרויקט</a></li><li><a href="/blog/before-signing" class="nav-link">לפני חתימה</a></li><li><a href="/blog/evaluating-offer" class="nav-link">בדיקת הצעה</a></li><li><a href="/blog/living-through-project" class="nav-link">חיי דיירים</a></li></ul></li></ul></div>
     
     
     

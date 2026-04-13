@@ -5125,11 +5125,10 @@ img, picture, figure {
 /* END MOBILE RESPONSIVE FIXES */
 
 /* Legal Pages Content Styles */
-
-/* Legal Pages Content Styles */
 .legal-page-content {
-  padding: 60px 0;
+  padding: 120px 0 60px;
   min-height: 60vh;
+  color: inherit;
 }
 
 .legal-page-content .container {
@@ -5177,20 +5176,39 @@ img, picture, figure {
   line-height: 1.6;
 }
 
-.legal-page-content .contact-box {
+.legal-page-content .contact-box,
+.legal-page-content .contact-info {
   background: rgba(0, 0, 0, 0.03);
   padding: 1.5rem;
   border-radius: 8px;
   margin-top: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.legal-page-content .contact-box a {
+.legal-page-content .contact-box a,
+.legal-page-content .contact-info a {
   color: inherit;
   text-decoration: underline;
 }
 
-.legal-page-content .contact-box a:hover {
+.legal-page-content .contact-box a:hover,
+.legal-page-content .contact-info a:hover {
   opacity: 0.8;
+}
+
+.legal-page-content .important-notice,
+.legal-page-content .legal-reference {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border-left: 4px solid currentColor;
+}
+
+[dir="rtl"] .legal-page-content .important-notice,
+[dir="rtl"] .legal-page-content .legal-reference {
+  border-left: none;
+  border-right: 4px solid currentColor;
 }
 
 /* Cookie Consent Styles */
@@ -7897,6 +7915,20 @@ nav.navbar .sub-menu li a:hover { color: #284f69 !important; background-color: r
   outline-offset: 2px;
 }
 
+/* ========== EMPTY SUBMENU HIDING (Auto-added by Zappy) ========== */
+.sub-menu:empty,
+.dropdown-menu:empty,
+.sub-menu.zappy-empty-submenu,
+.dropdown-menu.zappy-empty-submenu,
+.nav-menu .sub-menu.zappy-empty-submenu,
+nav .sub-menu.zappy-empty-submenu,
+.navbar .sub-menu.zappy-empty-submenu,
+#navMenu .sub-menu.zappy-empty-submenu,
+#navMenu .dropdown-menu.zappy-empty-submenu {
+  display: none !important;
+}
+
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
@@ -8508,6 +8540,12 @@ section[data-hero-type] {
 form.contact-form, .contact-form { flex-direction: column !important; align-items: stretch !important; }
 form.contact-form > .contact-form-field, .contact-form > .contact-form-field { width: 100% !important; align-self: stretch !important; }
 form.contact-form .contact-input, form.contact-form .contact-textarea { width: 100% !important; box-sizing: border-box !important; }
+
+
+/* ZAPPY_NAVBAR_CTA_ALIGNMENT_FIX */
+.nav-cta-container .zappy-search-container,
+.zappy-search-container { align-self: center; }
+.nav-cta-container p { margin: 0 !important; }
 
 
 /* ZAPPY_SECTION_BG_TYPE_FIX */
